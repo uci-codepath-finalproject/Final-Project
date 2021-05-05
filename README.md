@@ -1,7 +1,7 @@
 Original App Design Project - README Template
 ===
 
-# APP_NAME_HERE
+WeatherPal
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -16,11 +16,17 @@ Displays weather forecasts and useful tips based on a provided zip code, city, o
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:**
+- Weather
 - **Mobile:**
+- This application is for mobile use only and is not available for desktop.
 - **Story:**
+- User inputs a location, views the weather forecast, and receives tips.  The user can then follow tips to save time thinking on how to prepare for upcoming weather conditions and instead get out the door quickly.
 - **Market:**
+- This application is available for all users without any restrictions in a safe and user friendly environment.
 - **Habit:**
+- This application could be used whenever convenient by the user, and would most likely be used whenever the user needs to leave their house or travel somewhere.  It could become an essential tool for planning outings.
 - **Scope:**
+- We anticipate starting off our app by providing generic tips on clothing, driving conditions, visibility, and air quality and then later expanding to more customizable recommendations that each user can filter.  We also anticipate expanding to synchronize with home-use software such as Google Home, Amazon Echo Dot, and more.
 
 ## Product Spec
 
