@@ -50,32 +50,37 @@ We anticipate starting off our app by providing generic tips on clothing, drivin
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+* Create Account
+   * When users close app or first download the app, they must log in to gain access to their app and personal settings
+* Location Search Screen
+   * Users can use the search bar to enter a location to view forecasts for
+* Forecast Page
+   * Users can view predicted weather forecasts and tips.
+* Settings Page
+   * Users can change account information and other settings.
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* profile
+* Location search / forecast
+* setting
+
+Optional:
+
+* Saved Locations Page
+* Chat Message Screen
+* Share to Social Media Screen
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Forced Log In -> Account Signup If No Account
+* Location Search -> Forecast page
+* Settings -> Change Settings
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="https://i.imgur.com/6pye6jw.jpeg" width=600>
 
 
