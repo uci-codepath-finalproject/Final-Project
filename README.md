@@ -16,17 +16,17 @@ Displays weather forecasts and useful tips based on a provided zip code, city, o
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:**
-- Weather
+Weather
 - **Mobile:**
-- This application is for mobile use only and is not available for desktop.
+This application is for mobile use only and is not available for desktop.
 - **Story:**
-- User inputs a location, views the weather forecast, and receives tips.  The user can then follow tips to save time thinking on how to prepare for upcoming weather conditions and instead get out the door quickly.
+User inputs a location, views the weather forecast, and receives tips.  The user can then follow tips to save time thinking on how to prepare for upcoming weather conditions and instead get out the door quickly.
 - **Market:**
-- This application is available for all users without any restrictions in a safe and user friendly environment.
+This application is available for all users without any restrictions in a safe and user friendly environment.
 - **Habit:**
-- This application could be used whenever convenient by the user, and would most likely be used whenever the user needs to leave their house or travel somewhere.  It could become an essential tool for planning outings.
+This application could be used whenever convenient by the user, and would most likely be used whenever the user needs to leave their house or travel somewhere.  It could become an essential tool for planning outings.
 - **Scope:**
-- We anticipate starting off our app by providing generic tips on clothing, driving conditions, visibility, and air quality and then later expanding to more customizable recommendations that each user can filter.  We also anticipate expanding to synchronize with home-use software such as Google Home, Amazon Echo Dot, and more.
+We anticipate starting off our app by providing generic tips on clothing, driving conditions, visibility, and air quality and then later expanding to more customizable recommendations that each user can filter.  We also anticipate expanding to synchronize with home-use software such as Google Home, Amazon Echo Dot, and more.
 
 ## Product Spec
 
@@ -34,13 +34,19 @@ Displays weather forecasts and useful tips based on a provided zip code, city, o
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can sign up an account and log in 
+* User can search for a new location
+* Each location result is displayed in a new page
+* Location result page displays weather forecasts and tips
+* Settings (Locations, Notification, General Display)
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can save locations to be remembered the next time they log in
+* Map to view weather forecasts on based on current location
+* Share forecast / tips on social media
+* Support animation for different weather results or tips
+* Support chat functionality to communicate with other users
 
 ### 2. Screen Archetypes
 
