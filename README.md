@@ -76,7 +76,7 @@ We anticipate starting off our app by providing generic tips on clothing, drivin
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://imgur.com/gallery/bxRPwpd" width=600>
+<img src="https://i.imgur.com/6pye6jw.jpeg" width=600>
 
 
 ### [BONUS] Digital Wireframes & Mockups
