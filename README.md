@@ -11,7 +11,7 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+Displays weather forecasts and useful tips based on a provided zip code, city, or region.  WeatherPal could be used to receive the latest weather updates and important tips, such as wearing warmer clothes or bringing an umbrella, all in one centralized place.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
