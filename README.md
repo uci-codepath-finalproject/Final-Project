@@ -1,13 +1,13 @@
-Original App Design Project - README Template
+Original App Design Project - README
 ===
 
 # WeatherPal
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+4. [Schema](#Schema)
 
 ## Overview
 ### Description
@@ -89,10 +89,90 @@ Optional:
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+Model to Store User Information
+|Property|Type|Description|
+|--------|----|-----------|
+|objectID|String|Unique id to identify the user entry|
+|name|String|The name of the user|
+|age|Number|The age of the user|
+|username|String|The user’s login username|
+|password|String|The user’s login password|
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+**Network Requests** 
+- (CreateAccount / POST) Create a new user entry with login / password fields
+- (Validate/GET) Check if login / password combination is valid
+```
+let query = PFQuery(className:"Profiles")
+let username = usernameField.text!
+let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password, block: { 
+		... // do something in code
+        })
+```
+- (Delete) Delete an existing user who wants to terminate their account
+- (Edit/POST) Change profile information
+- (ViewProfile/GET) Get information about a specific user to render their profile page
+
+**External APIs**
+- OpenWeather Map API - Weather forecasting & statistics
+
+
+|HTTP Verb|Endpoint|Description|
+|---------|--------|-----------|
+|GET|api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}|Get current weather information by city|
+|GET|api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}|Get current weather information by zip code|
+|GET|api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}|Gives detailed forecast (by the minute, hour, day) of a specified latitude / longitude|
+|GET|api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}|Gives 5-day forecast of a particular city|
+
+- Example JSON Response
+
+
+```
+{
+  "coord": {
+    "lon": -122.08,
+    "lat": 37.39
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 282.55,
+    "feels_like": 281.86,
+    "temp_min": 280.37,
+    "temp_max": 284.26,
+    "pressure": 1023,
+    "humidity": 100
+  },
+  "visibility": 16093,
+  "wind": {
+    "speed": 1.5,
+    "deg": 350
+  },
+  "clouds": {
+    "all": 1
+  },
+  "dt": 1560350645,
+  "sys": {
+    "type": 1,
+    "id": 5122,
+    "message": 0.0139,
+    "country": "US",
+    "sunrise": 1560343627,
+    "sunset": 1560396563
+  },
+  "timezone": -25200,
+  "id": 420006353,
+  "name": "Mountain View",
+  "cod": 200
+  } 
+```
