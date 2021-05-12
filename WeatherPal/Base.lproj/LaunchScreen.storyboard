@@ -16,17 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="launchScreenPicture" translatesAutoresizingMaskIntoConstraints="NO" id="mcI-Yn-clq">
-                                <rect key="frame" x="0.0" y="181" width="414" height="534"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="launch_Screen_Picture" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-GP-ea7">
+                                <rect key="frame" x="5" y="313.5" width="404" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zfp-GP-ea7" secondAttribute="height" multiplier="3:2" id="iPQ-tM-wp9"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="mcI-Yn-clq" secondAttribute="trailing" id="D9E-ia-FRC"/>
-                            <constraint firstItem="mcI-Yn-clq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rwf-ee-7le"/>
-                            <constraint firstItem="mcI-Yn-clq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wRw-c6-Zw7"/>
-                            <constraint firstItem="mcI-Yn-clq" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xUF-JP-LO8"/>
+                            <constraint firstItem="Zfp-GP-ea7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="L9t-qo-8I8"/>
+                            <constraint firstItem="Zfp-GP-ea7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="LKn-fz-uhu"/>
+                            <constraint firstItem="Zfp-GP-ea7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PRw-nW-ggC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zfp-GP-ea7" secondAttribute="trailing" constant="5" id="ahr-FG-lkK"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +39,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreenPicture" width="800" height="534"/>
+        <image name="launch_Screen_Picture" width="800" height="534"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
