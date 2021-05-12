@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		0DABDB3F264B6DA8006E9F7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDB3E264B6DA8006E9F7E /* AppDelegate.swift */; };
 		0DABDB41264B6DA8006E9F7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDB40264B6DA8006E9F7E /* SceneDelegate.swift */; };
-		0DABDB43264B6DA8006E9F7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDB42264B6DA8006E9F7E /* ViewController.swift */; };
 		0DABDB46264B6DA8006E9F7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DABDB44264B6DA8006E9F7E /* Main.storyboard */; };
 		0DABDB48264B6DA9006E9F7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DABDB47264B6DA9006E9F7E /* Assets.xcassets */; };
 		0DABDB4B264B6DA9006E9F7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DABDB49264B6DA9006E9F7E /* LaunchScreen.storyboard */; };
 		0DABDB56264B6DA9006E9F7E /* WeatherPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDB55264B6DA9006E9F7E /* WeatherPalTests.swift */; };
 		0DABDB61264B6DA9006E9F7E /* WeatherPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDB60264B6DA9006E9F7E /* WeatherPalUITests.swift */; };
+		0DC0D6F9264BA1D400543C52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		0DABDB3B264B6DA8006E9F7E /* WeatherPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DABDB3E264B6DA8006E9F7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DABDB40264B6DA8006E9F7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DABDB42264B6DA8006E9F7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0DABDB45264B6DA8006E9F7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DABDB47264B6DA9006E9F7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DABDB4A264B6DA9006E9F7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		0DABDB5C264B6DA9006E9F7E /* WeatherPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DABDB60264B6DA9006E9F7E /* WeatherPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPalUITests.swift; sourceTree = "<group>"; };
 		0DABDB62264B6DA9006E9F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +101,11 @@
 			children = (
 				0DABDB3E264B6DA8006E9F7E /* AppDelegate.swift */,
 				0DABDB40264B6DA8006E9F7E /* SceneDelegate.swift */,
-				0DABDB42264B6DA8006E9F7E /* ViewController.swift */,
 				0DABDB44264B6DA8006E9F7E /* Main.storyboard */,
 				0DABDB47264B6DA9006E9F7E /* Assets.xcassets */,
 				0DABDB49264B6DA9006E9F7E /* LaunchScreen.storyboard */,
 				0DABDB4C264B6DA9006E9F7E /* Info.plist */,
+				0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */,
 			);
 			path = WeatherPal;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DABDB43264B6DA8006E9F7E /* ViewController.swift in Sources */,
+				0DC0D6F9264BA1D400543C52 /* LoginViewController.swift in Sources */,
 				0DABDB3F264B6DA8006E9F7E /* AppDelegate.swift in Sources */,
 				0DABDB41264B6DA8006E9F7E /* SceneDelegate.swift in Sources */,
 			);
