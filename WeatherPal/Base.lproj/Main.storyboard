@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -65,41 +66,54 @@
                                     <action selector="onLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1C-bD-0Xh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftJ-tm-Ezd">
-                                <rect key="frame" x="20" y="600" width="374" height="42"/>
-                                <color key="backgroundColor" red="0.83123582972593879" green="0.94581795276473968" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wY2-I2-oBQ"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="5ne-Af-LRx">
+                                <rect key="frame" x="48.5" y="802.5" width="317.5" height="39.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-VV-xOb">
+                                        <rect key="frame" x="0.0" y="0.0" width="223.5" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFc-Xl-k3P">
+                                        <rect key="frame" x="237.5" y="0.0" width="80" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9X-Es-jAa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5ne-Af-LRx" secondAttribute="height" multiplier="313:39" id="wsJ-fJ-0SH"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zx7-8F-qmW" firstAttribute="top" secondItem="bEA-DH-JmQ" secondAttribute="bottom" constant="12" id="0Ah-0p-mrX"/>
-                            <constraint firstItem="ftJ-tm-Ezd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0u2-tw-45v"/>
                             <constraint firstItem="bEA-DH-JmQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="1dT-kU-d80"/>
                             <constraint firstItem="mH1-jE-rNo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="9Yu-qJ-kLg"/>
                             <constraint firstItem="zx7-8F-qmW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Gzf-Pv-PiN"/>
                             <constraint firstItem="YD5-X9-qGD" firstAttribute="top" secondItem="bEA-DH-JmQ" secondAttribute="bottom" constant="19" id="HFx-1J-fqt"/>
-                            <constraint firstItem="ftJ-tm-Ezd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Icf-0s-C5G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Mw-So-YSV" secondAttribute="trailing" constant="20" id="J7Z-l1-YxM"/>
                             <constraint firstItem="9Mw-So-YSV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jnt-nf-9gG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rZ1-Ik-RTN" secondAttribute="trailing" constant="20" id="KDl-YP-eY4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bEA-DH-JmQ" secondAttribute="trailing" constant="50" id="NEK-Cm-fvJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5ne-Af-LRx" secondAttribute="bottom" constant="20" id="NgQ-7g-2pq"/>
                             <constraint firstItem="LEI-pI-45o" firstAttribute="top" secondItem="rZ1-Ik-RTN" secondAttribute="bottom" constant="18" id="P3c-mj-CNo"/>
                             <constraint firstItem="rZ1-Ik-RTN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PyC-sH-zRZ"/>
-                            <constraint firstItem="ftJ-tm-Ezd" firstAttribute="top" secondItem="9Mw-So-YSV" secondAttribute="bottom" constant="25" id="S3i-7T-i8v"/>
                             <constraint firstItem="vAB-kG-NRD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ayA-sd-MLp"/>
                             <constraint firstItem="9Mw-So-YSV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dUc-8s-gx4"/>
                             <constraint firstItem="rZ1-Ik-RTN" firstAttribute="top" secondItem="zx7-8F-qmW" secondAttribute="bottom" constant="4" id="ech-Ib-0Me"/>
+                            <constraint firstItem="5ne-Af-LRx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="evY-f6-VTw"/>
                             <constraint firstItem="mH1-jE-rNo" firstAttribute="top" secondItem="rZ1-Ik-RTN" secondAttribute="bottom" constant="5" id="fkA-eh-dV5"/>
                             <constraint firstItem="9Mw-So-YSV" firstAttribute="top" secondItem="vAB-kG-NRD" secondAttribute="bottom" constant="25" id="iQn-02-qOm"/>
                             <constraint firstItem="rZ1-Ik-RTN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="key-U1-a8a"/>
                             <constraint firstItem="vAB-kG-NRD" firstAttribute="top" secondItem="LEI-pI-45o" secondAttribute="bottom" constant="5" id="lM7-4Q-USH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ftJ-tm-Ezd" secondAttribute="trailing" constant="20" id="ozB-Ih-3aR"/>
                             <constraint firstItem="YD5-X9-qGD" firstAttribute="leading" secondItem="zx7-8F-qmW" secondAttribute="trailing" id="pXy-R5-n2Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vAB-kG-NRD" secondAttribute="trailing" constant="20" id="uoc-su-L1V"/>
                             <constraint firstItem="bEA-DH-JmQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="wfs-CC-hSG"/>
@@ -248,6 +262,9 @@
         <image name="search_icon" width="30" height="30"/>
         <image name="setting_icon" width="30" height="30"/>
         <image name="username_icon_64px" width="64" height="64"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
