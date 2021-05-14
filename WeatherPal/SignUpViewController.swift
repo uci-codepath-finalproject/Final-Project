@@ -1,31 +1,21 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  WeatherPal
 //
-//  Created by Hao-Ming Chiang on 5/11/21.
+//  Created by Hao-Ming Chiang on 5/14/21.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    
-    @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    
-    
+class SignUpViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onLogIn(_ sender: Any) {
-    }
-    
-    @IBAction func onSignUp(_ sender: Any) {
-        self.performSegue(withIdentifier: "loginToSignUp", sender: self)
-    }
-    
+
     /*
     // MARK: - Navigation
 

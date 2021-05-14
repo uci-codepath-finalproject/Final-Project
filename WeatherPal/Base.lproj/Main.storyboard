@@ -83,6 +83,7 @@
                                         </state>
                                         <connections>
                                             <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9X-Es-jAa"/>
+                                            <segue destination="XaL-me-3vu" kind="presentation" identifier="loginToSignUp" id="SIO-NF-wRW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -129,6 +130,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="76.339285714285708"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="YrU-eY-g6P">
+            <objects>
+                <viewController id="XaL-me-3vu" customClass="SignUpViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BeO-mP-t47">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Sax-5p-pRU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhg-32-kbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="869"/>
         </scene>
         <!--Search-->
         <scene sceneID="3kQ-f2-koB">

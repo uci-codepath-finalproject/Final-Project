@@ -18,6 +18,7 @@
 		0DC0D6FE264BA75300543C52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */; };
 		0DC0D703264BA7C300543C52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D702264BA7C300543C52 /* SearchViewController.swift */; };
 		0DC0D708264BA7E200543C52 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D707264BA7E200543C52 /* SettingViewController.swift */; };
+		0DCE8A30264E59AF0039FDCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0DC0D702264BA7C300543C52 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0DC0D707264BA7E200543C52 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */,
 				0DC0D702264BA7C300543C52 /* SearchViewController.swift */,
 				0DC0D707264BA7E200543C52 /* SettingViewController.swift */,
+				0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */,
 			);
 			path = WeatherPal;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DC0D703264BA7C300543C52 /* SearchViewController.swift in Sources */,
+				0DCE8A30264E59AF0039FDCD /* SignUpViewController.swift in Sources */,
 				0DC0D6F9264BA1D400543C52 /* LoginViewController.swift in Sources */,
 				0DABDB3F264B6DA8006E9F7E /* AppDelegate.swift in Sources */,
 				0DC0D6FE264BA75300543C52 /* ProfileViewController.swift in Sources */,
