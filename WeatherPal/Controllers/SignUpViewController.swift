@@ -9,13 +9,23 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    
+    @IBOutlet weak var firstNameField: UITextField!
+    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onCreateNewAccount(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

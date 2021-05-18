@@ -138,13 +138,258 @@
                     <view key="view" contentMode="scaleToFill" id="BeO-mP-t47">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-PX-IsO">
+                                <rect key="frame" x="148.5" y="100" width="117.5" height="79"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F9F-0s-pdt" userLabel="Password Stack View">
+                                <rect key="frame" x="20" y="484" width="374" height="79"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V6T-yX-3fK">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="password_icon_64px" translatesAutoresizingMaskIntoConstraints="NO" id="Xv0-mx-fxv">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Xv0-mx-fxv" secondAttribute="height" multiplier="1:1" id="Chf-KU-9LY"/>
+                                                    <constraint firstAttribute="height" constant="37" id="Rx7-YU-qFH"/>
+                                                    <constraint firstAttribute="width" constant="37" id="VDD-8g-kQW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shW-4z-kr2">
+                                                <rect key="frame" x="42" y="0.0" width="90" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bbr-kV-Sax" userLabel="Password Text Field">
+                                        <rect key="frame" x="0.0" y="45" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Bbr-kV-Sax" secondAttribute="height" multiplier="11:1" id="Am1-PI-eaw"/>
+                                            <constraint firstAttribute="height" constant="34" id="Ix0-RB-yY6"/>
+                                            <constraint firstAttribute="width" constant="374" id="UYM-St-ysm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F9F-0s-pdt" secondAttribute="height" multiplier="374:79" id="MXG-Y6-WJt"/>
+                                    <constraint firstAttribute="width" constant="374" id="ZCc-LT-el7"/>
+                                    <constraint firstAttribute="height" constant="79" id="zRN-Kx-7Ti"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dMe-1Y-s6j" userLabel="Confirm Password Stack View">
+                                <rect key="frame" x="20" y="573" width="374" height="79"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ltQ-IP-c6O">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="password_icon_64px" translatesAutoresizingMaskIntoConstraints="NO" id="JAM-2J-H3I">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="HNu-6n-vok"/>
+                                                    <constraint firstAttribute="width" secondItem="JAM-2J-H3I" secondAttribute="height" multiplier="1:1" id="jh2-rr-3ek"/>
+                                                    <constraint firstAttribute="height" constant="37" id="yZK-XK-DEy"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vq1-aM-H6G">
+                                                <rect key="frame" x="42" y="0.0" width="165" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l7W-8N-yeb" userLabel="Confirm Password Text Field">
+                                        <rect key="frame" x="0.0" y="45" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="IWA-hj-yGj"/>
+                                            <constraint firstAttribute="width" constant="374" id="b4d-0X-UJP"/>
+                                            <constraint firstAttribute="width" secondItem="l7W-8N-yeb" secondAttribute="height" multiplier="11:1" id="eXL-9C-Ven"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="QmA-9D-gQ7" userLabel="Email Stack View">
+                                <rect key="frame" x="20" y="401" width="374" height="73"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U2Y-1h-k9x">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="37"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="email_logo" translatesAutoresizingMaskIntoConstraints="NO" id="LEc-KK-vED">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="DTr-Wj-JhT"/>
+                                                    <constraint firstAttribute="width" secondItem="LEc-KK-vED" secondAttribute="height" multiplier="1:1" id="aM0-m7-3kI"/>
+                                                    <constraint firstAttribute="height" constant="37" id="pze-QG-Glj"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRb-PF-I60">
+                                                <rect key="frame" x="42" y="0.0" width="52.5" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-8R-aZV" userLabel="Email Text Field">
+                                        <rect key="frame" x="0.0" y="39" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="PDj-hb-HXU"/>
+                                            <constraint firstAttribute="width" secondItem="fhK-8R-aZV" secondAttribute="height" multiplier="11:1" id="dhY-ke-zV3"/>
+                                            <constraint firstAttribute="height" constant="34" id="gDu-eO-fsL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="G2i-ND-BBM"/>
+                                    <constraint firstAttribute="width" secondItem="QmA-9D-gQ7" secondAttribute="height" multiplier="374:73" id="JuE-lf-ymR"/>
+                                    <constraint firstAttribute="height" constant="73" id="hXs-X5-9PR"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CGk-lc-Ow7" userLabel="First Name Stack View">
+                                <rect key="frame" x="20" y="229" width="374" height="77"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-nN-3bn">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="38"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2gq-PZ-AN7">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2gq-PZ-AN7" secondAttribute="height" multiplier="1:1" id="KIF-tg-jVD"/>
+                                                    <constraint firstAttribute="width" constant="38" id="NhW-ad-dkD"/>
+                                                    <constraint firstAttribute="height" constant="38" id="q1Y-aU-Uuz"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="179-3L-7gU">
+                                                <rect key="frame" x="43" y="0.0" width="100" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y72-yd-tpo" userLabel="First Name Text Field">
+                                        <rect key="frame" x="0.0" y="43" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="GHn-Im-3fo"/>
+                                            <constraint firstAttribute="width" secondItem="y72-yd-tpo" secondAttribute="height" multiplier="11:1" id="XvZ-Hh-hAm"/>
+                                            <constraint firstAttribute="height" constant="34" id="ng8-fM-rLm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="SJL-jA-hOX"/>
+                                    <constraint firstAttribute="width" constant="374" id="Zdh-92-WsB"/>
+                                    <constraint firstAttribute="width" secondItem="CGk-lc-Ow7" secondAttribute="height" multiplier="34:7" id="uDs-AN-60f"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8HP-f0-2Ro" userLabel="Last Name Stack View">
+                                <rect key="frame" x="20" y="316" width="374" height="75"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-yu-C99">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="38"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="27r-CL-wgI">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="38" id="C0f-0a-amP"/>
+                                                    <constraint firstAttribute="height" constant="38" id="VXG-iX-i4Z"/>
+                                                    <constraint firstAttribute="width" secondItem="27r-CL-wgI" secondAttribute="height" multiplier="1:1" id="pXH-k4-DKn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkh-86-akN">
+                                                <rect key="frame" x="43" y="0.0" width="99" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KT9-rL-hSv" userLabel="Last Name Text Field">
+                                        <rect key="frame" x="0.0" y="41" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="CJK-Kr-ThN"/>
+                                            <constraint firstAttribute="width" constant="374" id="Mt5-4f-G7g"/>
+                                            <constraint firstAttribute="width" secondItem="KT9-rL-hSv" secondAttribute="height" multiplier="11:1" id="TRC-k5-kSN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="2GD-N9-qN5"/>
+                                    <constraint firstAttribute="width" constant="374" id="e5R-5f-umL"/>
+                                    <constraint firstAttribute="width" secondItem="8HP-f0-2Ro" secondAttribute="height" multiplier="374:75" id="tvu-T7-whc"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6f-j3-cl7">
+                                <rect key="frame" x="20" y="715" width="374" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.79963753739999999" blue="0.51350158739999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w6f-j3-cl7" secondAttribute="height" multiplier="374:45" id="AdA-zT-4pQ"/>
+                                    <constraint firstAttribute="width" constant="374" id="Pb1-ic-Qy3"/>
+                                    <constraint firstAttribute="height" constant="45" id="tv0-EA-SvA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="onCreateNewAccount:" destination="XaL-me-3vu" eventType="touchUpInside" id="VDz-gk-JK9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Sax-5p-pRU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F9F-0s-pdt" firstAttribute="top" secondItem="QmA-9D-gQ7" secondAttribute="bottom" constant="10" id="4d1-Ta-uky"/>
+                            <constraint firstItem="F9F-0s-pdt" firstAttribute="top" secondItem="QmA-9D-gQ7" secondAttribute="bottom" constant="10" id="6kC-lC-jTu"/>
+                            <constraint firstItem="Sax-5p-pRU" firstAttribute="bottom" secondItem="w6f-j3-cl7" secondAttribute="bottom" constant="48" id="85R-bz-EDc"/>
+                            <constraint firstItem="F9F-0s-pdt" firstAttribute="leading" secondItem="Sax-5p-pRU" secondAttribute="leading" constant="20" id="86z-lv-oEC"/>
+                            <constraint firstItem="ozn-PX-IsO" firstAttribute="top" secondItem="Sax-5p-pRU" secondAttribute="top" constant="100" id="At8-fe-692"/>
+                            <constraint firstItem="dMe-1Y-s6j" firstAttribute="top" secondItem="F9F-0s-pdt" secondAttribute="bottom" constant="10" id="Gi2-Jd-3zU"/>
+                            <constraint firstItem="Sax-5p-pRU" firstAttribute="trailing" secondItem="dMe-1Y-s6j" secondAttribute="trailing" constant="20" id="InK-Ii-NSc"/>
+                            <constraint firstItem="Sax-5p-pRU" firstAttribute="trailing" secondItem="F9F-0s-pdt" secondAttribute="trailing" constant="20" id="Jcb-xD-1bA"/>
+                            <constraint firstItem="CGk-lc-Ow7" firstAttribute="top" secondItem="ozn-PX-IsO" secondAttribute="bottom" constant="50" id="KpU-Ee-ZEl"/>
+                            <constraint firstItem="Sax-5p-pRU" firstAttribute="trailing" secondItem="w6f-j3-cl7" secondAttribute="trailing" constant="20" id="Oi2-tj-0ra"/>
+                            <constraint firstItem="QmA-9D-gQ7" firstAttribute="leading" secondItem="Sax-5p-pRU" secondAttribute="leading" constant="20" id="UhF-re-A0C"/>
+                            <constraint firstItem="QmA-9D-gQ7" firstAttribute="top" secondItem="8HP-f0-2Ro" secondAttribute="bottom" constant="10" id="ZYJ-40-ldQ"/>
+                            <constraint firstItem="8HP-f0-2Ro" firstAttribute="top" secondItem="CGk-lc-Ow7" secondAttribute="bottom" constant="10" id="ds5-TX-zWG"/>
+                            <constraint firstItem="w6f-j3-cl7" firstAttribute="leading" secondItem="Sax-5p-pRU" secondAttribute="leading" constant="20" id="fSc-KV-7hM"/>
+                            <constraint firstItem="QmA-9D-gQ7" firstAttribute="top" secondItem="8HP-f0-2Ro" secondAttribute="bottom" constant="10" id="fXS-2a-5Nd"/>
+                            <constraint firstItem="Sax-5p-pRU" firstAttribute="trailing" secondItem="CGk-lc-Ow7" secondAttribute="trailing" constant="20" id="i6h-L9-suh"/>
+                            <constraint firstItem="CGk-lc-Ow7" firstAttribute="leading" secondItem="Sax-5p-pRU" secondAttribute="leading" constant="20" id="jwm-zu-A76"/>
+                            <constraint firstItem="dMe-1Y-s6j" firstAttribute="leading" secondItem="Sax-5p-pRU" secondAttribute="leading" constant="20" id="knZ-mg-eyx"/>
+                            <constraint firstItem="8HP-f0-2Ro" firstAttribute="leading" secondItem="Sax-5p-pRU" secondAttribute="leading" constant="20" id="qKy-DT-zfi"/>
+                            <constraint firstItem="Sax-5p-pRU" firstAttribute="trailing" secondItem="QmA-9D-gQ7" secondAttribute="trailing" constant="20" id="s3z-aG-J8J"/>
+                            <constraint firstItem="ozn-PX-IsO" firstAttribute="centerX" secondItem="BeO-mP-t47" secondAttribute="centerX" id="saf-5X-PWG"/>
+                            <constraint firstItem="w6f-j3-cl7" firstAttribute="top" secondItem="dMe-1Y-s6j" secondAttribute="bottom" constant="63" id="tsT-hf-8Xu"/>
+                            <constraint firstItem="Sax-5p-pRU" firstAttribute="trailing" secondItem="8HP-f0-2Ro" secondAttribute="trailing" constant="20" id="uHB-U9-Yha"/>
+                            <constraint firstItem="8HP-f0-2Ro" firstAttribute="top" secondItem="CGk-lc-Ow7" secondAttribute="bottom" constant="10" id="wVp-jH-Ytk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="l7W-8N-yeb" id="0Me-DM-KWm"/>
+                        <outlet property="emailField" destination="fhK-8R-aZV" id="dbR-ze-qXq"/>
+                        <outlet property="firstNameField" destination="y72-yd-tpo" id="M6O-mR-Ngy"/>
+                        <outlet property="lastNameField" destination="KT9-rL-hSv" id="puW-ct-rzU"/>
+                        <outlet property="passwordField" destination="Bbr-kV-Sax" id="WsE-gc-QrM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhg-32-kbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="869"/>
+            <point key="canvasLocation" x="137.68115942028987" y="868.52678571428567"/>
         </scene>
         <!--Search-->
         <scene sceneID="3kQ-f2-koB">
@@ -272,6 +517,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="email_logo" width="32" height="32"/>
         <image name="login_logo" width="200" height="200"/>
         <image name="password_icon_64px" width="64" height="64"/>
         <image name="profile_icon" width="30" height="30"/>
