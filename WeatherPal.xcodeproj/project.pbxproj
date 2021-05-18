@@ -52,8 +52,8 @@
 		0DABDB5C264B6DA9006E9F7E /* WeatherPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DABDB60264B6DA9006E9F7E /* WeatherPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPalUITests.swift; sourceTree = "<group>"; };
 		0DABDB62264B6DA9006E9F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/hao-mingchiang/Desktop/Final-Project/WeatherPal/Controllers/LoginViewController.swift"; sourceTree = "<absolute>"; };
+		0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "/Users/hao-mingchiang/Desktop/Final-Project/WeatherPal/Controllers/ProfileViewController.swift"; sourceTree = "<absolute>"; };
 		0DC0D702264BA7C300543C52 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0DC0D707264BA7E200543C52 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +84,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3A339B26542AEC00934399 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */,
+				0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */,
+				0DC0D702264BA7C300543C52 /* SearchViewController.swift */,
+				0DC0D707264BA7E200543C52 /* SettingViewController.swift */,
+				0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0D3A33A326542C4700934399 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0DABDB49264B6DA9006E9F7E /* LaunchScreen.storyboard */,
+				0DABDB44264B6DA8006E9F7E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		0DABDB32264B6DA8006E9F7E = {
 			isa = PBXGroup;
 			children = (
@@ -107,17 +128,12 @@
 		0DABDB3D264B6DA8006E9F7E /* WeatherPal */ = {
 			isa = PBXGroup;
 			children = (
+				0D3A33A326542C4700934399 /* Storyboards */,
+				0D3A339B26542AEC00934399 /* Controllers */,
 				0DABDB3E264B6DA8006E9F7E /* AppDelegate.swift */,
 				0DABDB40264B6DA8006E9F7E /* SceneDelegate.swift */,
-				0DABDB44264B6DA8006E9F7E /* Main.storyboard */,
 				0DABDB47264B6DA9006E9F7E /* Assets.xcassets */,
-				0DABDB49264B6DA9006E9F7E /* LaunchScreen.storyboard */,
 				0DABDB4C264B6DA9006E9F7E /* Info.plist */,
-				0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */,
-				0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */,
-				0DC0D702264BA7C300543C52 /* SearchViewController.swift */,
-				0DC0D707264BA7E200543C52 /* SettingViewController.swift */,
-				0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */,
 			);
 			path = WeatherPal;
 			sourceTree = "<group>";
