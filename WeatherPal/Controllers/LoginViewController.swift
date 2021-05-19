@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLogIn(_ sender: Any) {
+        
     }
     
     @IBAction func onSignUp(_ sender: Any) {

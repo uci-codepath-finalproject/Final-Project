@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,8 +27,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD5-X9-qGD">
-                                <rect key="frame" x="74" y="363" width="95.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD5-X9-qGD">
+                                <rect key="frame" x="74" y="363" width="52.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -140,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-PX-IsO">
-                                <rect key="frame" x="148.5" y="100" width="117.5" height="79"/>
+                                <rect key="frame" x="148.5" y="25" width="117.5" height="154"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -357,7 +357,7 @@
                             <constraint firstItem="F9F-0s-pdt" firstAttribute="top" secondItem="QmA-9D-gQ7" secondAttribute="bottom" constant="10" id="6kC-lC-jTu"/>
                             <constraint firstItem="Sax-5p-pRU" firstAttribute="bottom" secondItem="w6f-j3-cl7" secondAttribute="bottom" constant="48" id="85R-bz-EDc"/>
                             <constraint firstItem="F9F-0s-pdt" firstAttribute="leading" secondItem="Sax-5p-pRU" secondAttribute="leading" constant="20" id="86z-lv-oEC"/>
-                            <constraint firstItem="ozn-PX-IsO" firstAttribute="top" secondItem="Sax-5p-pRU" secondAttribute="top" constant="100" id="At8-fe-692"/>
+                            <constraint firstItem="ozn-PX-IsO" firstAttribute="top" secondItem="Sax-5p-pRU" secondAttribute="top" constant="25" id="At8-fe-692"/>
                             <constraint firstItem="dMe-1Y-s6j" firstAttribute="top" secondItem="F9F-0s-pdt" secondAttribute="bottom" constant="10" id="Gi2-Jd-3zU"/>
                             <constraint firstItem="Sax-5p-pRU" firstAttribute="trailing" secondItem="dMe-1Y-s6j" secondAttribute="trailing" constant="20" id="InK-Ii-NSc"/>
                             <constraint firstItem="Sax-5p-pRU" firstAttribute="trailing" secondItem="F9F-0s-pdt" secondAttribute="trailing" constant="20" id="Jcb-xD-1bA"/>
