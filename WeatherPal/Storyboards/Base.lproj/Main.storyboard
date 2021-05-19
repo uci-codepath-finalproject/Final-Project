@@ -398,6 +398,16 @@
                     <view key="view" contentMode="scaleToFill" id="czR-bg-aYO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8t-kQ-yg7" userLabel="TestingAPI">
+                                <rect key="frame" x="178" y="297" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click Me"/>
+                                <connections>
+                                    <action selector="testAPI:" destination="pDI-Ru-Zz0" eventType="touchUpInside" id="SLt-A1-c2p"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YMw-vr-r3J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
