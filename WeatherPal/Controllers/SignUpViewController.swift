@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewController: UIViewController {
 
@@ -23,7 +24,19 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func onCreateNewAccount(_ sender: Any) {
+        let user = PFUser()
+        user.username = emailField.text
+        user.password = passwordField.text
+        user.signUpInBackground(block: { (success, error) in
+            if success {
+                print("added new user!")
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("Error: \(error?.localizedDescription)")
+            }
+        })
         
+        //TODO : STILL NEED TO SET FIRST / LAST NAME
     }
     
     /*
