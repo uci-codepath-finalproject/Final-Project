@@ -178,5 +178,5 @@ let password = passwordField.text!
 ```
 ## Video Walkthrough
 
-Work Completed So Far
+Work Completed So Far (as of May 18 2021)
 ![demo](Asset/)
