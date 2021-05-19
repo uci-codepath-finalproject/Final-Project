@@ -12,7 +12,7 @@ struct API {
     
     static func getForecast(completion: @escaping (Forecast?) -> Void) {
         
-        let apikey = ""
+        let apikey = "d7ca5662b88d1d4ed0983b62c5a8847c"
         
         
         let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=London&appid=\(apikey)")!
