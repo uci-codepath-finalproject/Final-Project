@@ -8,14 +8,30 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
+    var forecast: Forecast? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    func getAPIData() {
+        API.getForecast() { (forecast) in
+            guard let forecast = forecast else {
+                print("error ???")
+                return
+            }
+            self.forecast = forecast
+            print("success: longitude is\(forecast.coord_lon)")
+        }
+    }
+    
+    @IBAction func testAPI(_ sender: Any) {
+        getAPIData()
+    }
+    
     /*
     // MARK: - Navigation
 

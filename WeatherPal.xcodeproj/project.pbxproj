@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		0DC0D703264BA7C300543C52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D702264BA7C300543C52 /* SearchViewController.swift */; };
 		0DC0D708264BA7E200543C52 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D707264BA7E200543C52 /* SettingViewController.swift */; };
 		0DCE8A30264E59AF0039FDCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */; };
+		6B29798D2654A875002D85DD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29798C2654A875002D85DD /* API.swift */; };
+		6B29798F2654A8BA002D85DD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29798E2654A8BA002D85DD /* Forecast.swift */; };
 		83FD852853A97D0670EFA6E2 /* Pods_WeatherPalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6DFD56B486A503FD7E504A /* Pods_WeatherPalTests.framework */; };
 		CDD63F5B2816EA94654EF389 /* Pods_WeatherPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040C7393E035561EB55164C8 /* Pods_WeatherPal.framework */; };
 		EE63FD69E679D4A1B7F15D59 /* Pods_WeatherPal_WeatherPalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5600DC1EB5556E6D74200C05 /* Pods_WeatherPal_WeatherPalUITests.framework */; };
@@ -57,13 +59,15 @@
 		0DABDB5C264B6DA9006E9F7E /* WeatherPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DABDB60264B6DA9006E9F7E /* WeatherPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPalUITests.swift; sourceTree = "<group>"; };
 		0DABDB62264B6DA9006E9F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/hao-mingchiang/Desktop/Final-Project/WeatherPal/Controllers/LoginViewController.swift"; sourceTree = "<absolute>"; };
-		0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "/Users/hao-mingchiang/Desktop/Final-Project/WeatherPal/Controllers/ProfileViewController.swift"; sourceTree = "<absolute>"; };
+		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/ethanwong/Document/UCI/CodePathiOS/Final-Project/WeatherPal/Controllers/LoginViewController.swift"; sourceTree = "<absolute>"; };
+		0DC0D6FD264BA75300543C52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "/Users/ethanwong/Document/UCI/CodePathiOS/Final-Project/WeatherPal/Controllers/ProfileViewController.swift"; sourceTree = "<absolute>"; };
 		0DC0D702264BA7C300543C52 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0DC0D707264BA7E200543C52 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		51D6128425A28E217B5D389E /* Pods-WeatherPalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherPalTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherPalTests/Pods-WeatherPalTests.release.xcconfig"; sourceTree = "<group>"; };
 		5600DC1EB5556E6D74200C05 /* Pods_WeatherPal_WeatherPalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherPal_WeatherPalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B29798C2654A875002D85DD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = WeatherPal/API.swift; sourceTree = SOURCE_ROOT; };
+		6B29798E2654A8BA002D85DD /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		8155226839B3BCB5DA7D09A3 /* Pods-WeatherPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherPal.release.xcconfig"; path = "Target Support Files/Pods-WeatherPal/Pods-WeatherPal.release.xcconfig"; sourceTree = "<group>"; };
 		A519CFDC7955FD4B70685F69 /* Pods-WeatherPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherPal.debug.xcconfig"; path = "Target Support Files/Pods-WeatherPal/Pods-WeatherPal.debug.xcconfig"; sourceTree = "<group>"; };
 		C16A393B1767C2769D00E574 /* Pods-WeatherPal-WeatherPalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherPal-WeatherPalUITests.release.xcconfig"; path = "Target Support Files/Pods-WeatherPal-WeatherPalUITests/Pods-WeatherPal-WeatherPalUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				0D3A33A326542C4700934399 /* Storyboards */,
 				0D3A339B26542AEC00934399 /* Controllers */,
 				0DABDB3E264B6DA8006E9F7E /* AppDelegate.swift */,
+				6B29798C2654A875002D85DD /* API.swift */,
+				6B29798E2654A8BA002D85DD /* Forecast.swift */,
 				0DABDB40264B6DA8006E9F7E /* SceneDelegate.swift */,
 				0DABDB47264B6DA9006E9F7E /* Assets.xcassets */,
 				0DABDB4C264B6DA9006E9F7E /* Info.plist */,
@@ -193,7 +199,6 @@
 				C979E28363E5892CAA1833D4 /* Pods-WeatherPalTests.debug.xcconfig */,
 				51D6128425A28E217B5D389E /* Pods-WeatherPalTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -439,8 +444,10 @@
 				0DCE8A30264E59AF0039FDCD /* SignUpViewController.swift in Sources */,
 				0DC0D6F9264BA1D400543C52 /* LoginViewController.swift in Sources */,
 				0DABDB3F264B6DA8006E9F7E /* AppDelegate.swift in Sources */,
+				6B29798F2654A8BA002D85DD /* Forecast.swift in Sources */,
 				0DC0D6FE264BA75300543C52 /* ProfileViewController.swift in Sources */,
 				0DABDB41264B6DA8006E9F7E /* SceneDelegate.swift in Sources */,
+				6B29798D2654A875002D85DD /* API.swift in Sources */,
 				0DC0D708264BA7E200543C52 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

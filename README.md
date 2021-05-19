@@ -34,19 +34,19 @@ We anticipate starting off our app by providing generic tips on clothing, drivin
 
 **Required Must-have Stories**
 
-* User can sign up an account and log in 
-* User can search for a new location
-* Each location result is displayed in a new page
-* Location result page displays weather forecasts and tips
-* Settings (Locations, Notification, General Display)
+- [X] * User can sign up an account and log in 
+- [ ] * User can search for a new location
+- [ ] * Each location result is displayed in a new page
+- [ ] * Location result page displays weather forecasts and tips
+- [ ] * Settings (Locations, Notification, General Display)
 
 **Optional Nice-to-have Stories**
 
-* User can save locations to be remembered the next time they log in
-* Map to view weather forecasts on based on current location
-* Share forecast / tips on social media
-* Support animation for different weather results or tips
-* Support chat functionality to communicate with other users
+- [ ] * User can save locations to be remembered the next time they log in
+- [ ] * Map to view weather forecasts on based on current location
+- [ ] * Share forecast / tips on social media
+- [ ] * Support animation for different weather results or tips
+- [ ] * Support chat functionality to communicate with other users
 
 ### 2. Screen Archetypes
 
@@ -176,3 +176,7 @@ let password = passwordField.text!
   "cod": 200
   } 
 ```
+## Video Walkthrough
+
+Work Completed So Far (as of May 18 2021)
+![demo](Asset/)
