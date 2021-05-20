@@ -24,7 +24,8 @@ class SearchViewController: UIViewController {
                 return
             }
             self.forecast = forecast
-            print("success: longitude is\(forecast.coord_lon)")
+            print("success: weather\(forecast.coord_lon)")
+            print(forecast.weather[0].description, "testing weather")
         }
     }
     

@@ -1,5 +1,5 @@
 //
-//  Forecast.swift
+//  WeatherDescription.swift
 //  WeatherPal
 //
 //  Created by Ethan Wong on 5/18/21.
@@ -10,15 +10,13 @@ import Foundation
 /* store stuff from API into a Restaurant object to make stuff easier and
     track an arra of them */
 
-class Forecast {
+class WeatherDescription {
 //    var imageURL : URL?
 //    var url: URL?
-    var coords: [String:Any]
-    var coord_lon: Double
-    var coord_lat: Double
-    var weather: [WeatherDescription]
-    
-    var temps: [Any]
+    var id: Int
+    var icon: String
+    var main: String
+    var description: String
     
 //    var mainCategory: String
 //    var phone: String
@@ -26,18 +24,13 @@ class Forecast {
 //    var reviews: Int
     
     init(dict: [String:Any]) {
-        coords = (dict["coord"]) as! [String:Any]
-        coord_lon = coords["lon"] as! Double
-        coord_lat = coords["lat"] as! Double
-        
-        temps = (dict["weather"]) as! [Any]
-        for temp in temps {
-            weather.append(WeatherDescription.init(dict: temp as! [String : Any]))
-            
-        }
-        
-    
-        
+//        coords = (dict["coord"]) as! [String:Any]
+//        coord_lon = coords["lon"] as! Double
+//        coord_lat = coords["lat"] as! Double
+        id = dict["id"] as! Int
+        icon = dict["icon"] as! String
+        main = dict["main"] as! String
+        description = dict["description"] as! String
 //        name = dict["name"] as! String
 //        rating = dict["rating"] as! Double
 //        reviews = dict["review_count"] as! Int
@@ -45,11 +38,6 @@ class Forecast {
 //        url = URL(string: dict["url"] as! String)
 //        // my note --> dict : dict shows that the argument label dict corresponds to the dict object
 //        mainCategory = Restaurant.getMainCategory(dict: dict)
-    }
-    
-    static func tostring() {
-//        print(coord_lon, coord_lat, weather)
-        
     }
     
 //    static func getMainCategory(dict: [String:Any]) -> String {
