@@ -25,7 +25,22 @@ class SearchViewController: UIViewController {
             }
             self.forecast = forecast
             print("success: weather\(forecast.coord_lon)")
-            print(forecast.weather[0].description, "testing weather")
+            for f in forecast.weather{
+                print(f.description, "testing weather")
+            }
+            print(forecast.temperature)
+            print(forecast.temperature_feelslike)
+            print(forecast.temperature_min)
+            print(forecast.temperature_max)
+            print(forecast.pressure)
+            print(forecast.humidity)
+            print(forecast.visibility)
+            print(forecast.wind_speed)
+            print(forecast.wind_direction_deg)
+            print(forecast.wind_gust)
+            print(forecast.cloud_percentage)
+            print(forecast.rain ?? "N/A")
+            print(forecast.snow ?? "N/A")
         }
     }
     

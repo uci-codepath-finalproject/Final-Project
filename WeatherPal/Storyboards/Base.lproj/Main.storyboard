@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -134,19 +134,19 @@
         <!--Sign Up View Controller-->
         <scene sceneID="YrU-eY-g6P">
             <objects>
-                <viewController id="XaL-me-3vu" customClass="SignUpViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="XaL-me-3vu" customClass="SignUpViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BeO-mP-t47">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-PX-IsO">
-                                <rect key="frame" x="148.5" y="25" width="117.5" height="154"/>
+                                <rect key="frame" x="148.5" y="69" width="117.5" height="164"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F9F-0s-pdt" userLabel="Password Stack View">
-                                <rect key="frame" x="20" y="484" width="374" height="79"/>
+                                <rect key="frame" x="20" y="538" width="374" height="79"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V6T-yX-3fK">
                                         <rect key="frame" x="0.0" y="0.0" width="132" height="37"/>
@@ -185,7 +185,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dMe-1Y-s6j" userLabel="Confirm Password Stack View">
-                                <rect key="frame" x="20" y="573" width="374" height="79"/>
+                                <rect key="frame" x="20" y="627" width="374" height="79"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ltQ-IP-c6O">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="37"/>
@@ -219,7 +219,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="QmA-9D-gQ7" userLabel="Email Stack View">
-                                <rect key="frame" x="20" y="401" width="374" height="73"/>
+                                <rect key="frame" x="20" y="455" width="374" height="73"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U2Y-1h-k9x">
                                         <rect key="frame" x="0.0" y="0.0" width="94.5" height="37"/>
@@ -258,7 +258,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CGk-lc-Ow7" userLabel="First Name Stack View">
-                                <rect key="frame" x="20" y="229" width="374" height="77"/>
+                                <rect key="frame" x="20" y="283" width="374" height="77"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-nN-3bn">
                                         <rect key="frame" x="0.0" y="0.0" width="143" height="38"/>
@@ -297,7 +297,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8HP-f0-2Ro" userLabel="Last Name Stack View">
-                                <rect key="frame" x="20" y="316" width="374" height="75"/>
+                                <rect key="frame" x="20" y="370" width="374" height="75"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-yu-C99">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="38"/>
@@ -336,7 +336,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6f-j3-cl7">
-                                <rect key="frame" x="20" y="715" width="374" height="45"/>
+                                <rect key="frame" x="20" y="769" width="374" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.79963753739999999" blue="0.51350158739999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="w6f-j3-cl7" secondAttribute="height" multiplier="374:45" id="AdA-zT-4pQ"/>
@@ -396,7 +396,7 @@
             <objects>
                 <viewController id="pDI-Ru-Zz0" customClass="SearchViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="czR-bg-aYO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8t-kQ-yg7" userLabel="TestingAPI">
@@ -422,7 +422,7 @@
             <objects>
                 <viewController id="kV6-2C-7wp" customClass="ProfileViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F3K-ea-Z9r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="n6w-Fp-qxm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -438,7 +438,7 @@
             <objects>
                 <viewController id="62N-6Q-SOw" customClass="SettingViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xsu-iG-w9N">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="AXG-pW-qE3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -452,7 +452,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="OYd-4d-OZz">
             <objects>
-                <tabBarController id="DJ2-aq-Zh3" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="DJ2-aq-Zh3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MN5-L4-Zq2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -475,7 +475,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="profile_icon" id="lTk-dQ-HUT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W1n-Nh-UX4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -494,7 +494,7 @@
                     <tabBarItem key="tabBarItem" title="Setting" image="setting_icon" id="6af-O8-vhp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Dq-C9-HVH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -513,7 +513,7 @@
                     <tabBarItem key="tabBarItem" title="Search" image="search_icon" id="xNS-qr-PVs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zYM-Rx-3gS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
