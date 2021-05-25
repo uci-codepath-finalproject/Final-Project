@@ -18,8 +18,12 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameField = ((user["firstName"] as? String)!) + " " + ((user["lastName"] as? String)!)
-        name.text = nameField
+        let first_name = user["firstName"] ?? ""
+        let last_name = user["lastName"] ?? ""
+        name.text = "\(first_name) \(last_name)"
+        
+//        nameField = ((user["firstName"] as? String)!) + " " + ((user["lastName"] as? String)!)
+//        name.text = nameField
         email.text = user.username
         // Do any additional setup after loading the view.
     }

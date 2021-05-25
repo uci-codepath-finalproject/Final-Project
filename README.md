@@ -35,8 +35,8 @@ We anticipate starting off our app by providing generic tips on clothing, drivin
 **Required Must-have Stories**
 
 - [X] * User can sign up an account and log in 
-- [ ] * User can search for a new location
-- [ ] * Each location result is displayed in a new page
+- [X] * User can search for a new location
+- [X] * Each location result is displayed
 - [ ] * Location result page displays weather forecasts and tips
 - [ ] * Settings (Locations, Notification, General Display)
 
@@ -178,6 +178,6 @@ let password = passwordField.text!
 ```
 ## Video Walkthrough
 
-Work Completed So Far (as of May 18 2021)
+Work Completed So Far (as of May 24 2021)
 
-![demo](Asset/WeatherPal-05182021.gif)
+<img src='https://media.giphy.com/media/1r9LOGfSuu9dp6JeL4/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
