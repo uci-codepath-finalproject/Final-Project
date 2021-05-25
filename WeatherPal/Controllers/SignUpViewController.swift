@@ -25,6 +25,8 @@ class SignUpViewController: UIViewController {
     
     @IBAction func onCreateNewAccount(_ sender: Any) {
         let user = PFUser()
+        user["firstName"] = firstNameField.text
+        user["lastName"] = lastNameField.text
         user.username = emailField.text
         user.password = passwordField.text
         user.signUpInBackground(block: { (success, error) in
