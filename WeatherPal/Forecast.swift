@@ -43,6 +43,7 @@ class Forecast {
 //    var reviews: Int
     
     init(dict: [String:Any]) {
+        //TODO : ACCOUNT IF THERE ARE NO RESULTS
         coords = (dict["coord"]) as! [String:Any]
         coord_lon = coords["lon"] as! Double
         coord_lat = coords["lat"] as! Double
