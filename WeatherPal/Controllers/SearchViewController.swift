@@ -6,11 +6,19 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var tempResults: UILabel!
+    @IBOutlet weak var cityName: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var weatherIcon: UIImageView!
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var cloudinessLabel: UILabel!
+    
     
     var forecast: Forecast? = nil
     
@@ -31,6 +39,7 @@ class SearchViewController: UIViewController {
             for f in forecast.weather{
                 print(f.description, "testing weather")
             }
+            print(forecast.city)
             print(forecast.temperature)
             print(forecast.temperature_feelslike)
             print(forecast.temperature_min)
@@ -60,11 +69,26 @@ class SearchViewController: UIViewController {
                 // no results, invalid city
                 result += "Sorry, invalid city.  Try again"
             } else {
+                
+                self.cityName.text = forecast.city + ", " + forecast.country
+                self.temperatureLabel.text = String(format: "%g", round(forecast.temperature)) + " °C"
+                self.humidityLabel.text = String(forecast.humidity) + " %"
+                self.pressureLabel.text = String(forecast.pressure) + " hPa"
+                self.cloudinessLabel.text = String(forecast.cloud_percentage) + " %"
+                
+                var iconPath: String = ""
+                for f in forecast.weather{
+                    iconPath = "http://openweathermap.org/img/wn/\(f.icon)@2x.png"
+                }
+                let iconURL = URL(string: iconPath) ?? nil
+                self.weatherIcon.af_setImage(withURL: iconURL!)
+                
                 result += "longitude: \(forecast.coord_lon)\n"
                 result += "latitude: \(forecast.coord_lat)\n"
                 for f in forecast.weather{
                     result += "overview: \(f.description)\n"
                 }
+                result += "city: \(forecast.city)\n"
                 result += "temperature  (C): \(forecast.temperature)\n"
                 result += "feels like   (C): \(forecast.temperature_feelslike)\n"
                 result += "min temp     (C): \(forecast.temperature_min)\n"

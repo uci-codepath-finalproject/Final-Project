@@ -30,13 +30,15 @@ class Forecast {
     var rain: Double?
     var snow: Double?
     var code: Int
-    
+    var city: String
+    var country: String
     // deal with rain vs snow
     
     var coords: [String:Any]
     var mains: [String:Any]
     var winds: [String:Any]
     var temps: [Any] // temporary for tracking passed arrays from JSON response
+    var sys: [String:Any]
     
 //    var mainCategory: String
 //    var phone: String
@@ -65,16 +67,17 @@ class Forecast {
             cloud_percentage = 0
             rain = 0
             snow = 0
-            
+            city = ""
+            country = ""
             // deal with rain vs snow
             
             coords = [:]
             mains = [:]
             winds = [:]
+            sys = [:]
             
         } else { // only initialize values if we know it was a valid city
             code = 200
-            
             coords = (dict["coord"]) as! [String:Any]
             coord_lon = coords["lon"] as! Double
             coord_lat = coords["lat"] as! Double
@@ -108,6 +111,12 @@ class Forecast {
             if (dict["snow"] != nil) {
                 snow = ((dict["snow"]) as! [String:Any])["snow.1h"] as? Double
             }
+            
+            city = dict["name"] as! String
+            
+            sys = (dict["sys"]) as! [String:Any]
+            country = sys["country"] as! String
+            
         }
     }
     
