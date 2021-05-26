@@ -106,10 +106,22 @@ class Forecast {
             cloud_percentage = ((dict["clouds"]) as! [String:Any])["all"] as! Int
             
             if (dict["rain"] != nil) {
-                rain = ((dict["rain"]) as! [String:Any])["rain.1h"] as? Double
+                let rains = (dict["rain"]) as! [String:Any]
+                if(rains["1h"] != nil) {
+                    rain = rains["1h"] as? Double ?? 0
+                } else {
+                    rain = rains["3h"] as? Double ?? 0
+                }
+                //rain = ((dict["rain"]) as! [String:Any])["rain.1h"] as? Double
             }
             if (dict["snow"] != nil) {
-                snow = ((dict["snow"]) as! [String:Any])["snow.1h"] as? Double
+                let snows = (dict["snow"]) as! [String:Any]
+                if(snows["1h"] != nil) {
+                    snow = snows["1h"] as? Double ?? 0
+                } else {
+                    snow = snows["3h"] as? Double ?? 0
+                }
+                //snow = ((dict["snow"]) as! [String:Any])["snow.1h"] as? Double
             }
             
             city = dict["name"] as! String

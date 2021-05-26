@@ -18,14 +18,54 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var cloudinessLabel: UILabel!
+    @IBOutlet weak var rainVolumeLabel: UILabel!
+    @IBOutlet weak var snowVolumeLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var locationTitle: UILabel!
+    @IBOutlet weak var humidityIcon: UIImageView!
+    @IBOutlet weak var humidityTitle: UILabel!
+    @IBOutlet weak var pressureIcon: UIImageView!
+    @IBOutlet weak var pressureTitle: UILabel!
+    @IBOutlet weak var cloudIcon: UIImageView!
+    @IBOutlet weak var cloudTitle: UILabel!
+    @IBOutlet weak var rainIcon: UIImageView!
+    @IBOutlet weak var rainTitle: UILabel!
+    @IBOutlet weak var snowIcon: UIImageView!
+    @IBOutlet weak var snowTitle: UILabel!
     
     var forecast: Forecast? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideDisplay(data: true)
         // Do any additional setup after loading the view.
+    }
+    
+    func hideDisplay(data: Bool) {
+        cityName.isHidden = data
+        temperatureLabel.isHidden = data
+        humidityLabel.isHidden = data
+        weatherIcon.isHidden = data
+        pressureLabel.isHidden = data
+        cloudinessLabel.isHidden = data
+        rainVolumeLabel.isHidden = data
+        snowVolumeLabel.isHidden = data
+        descriptionLabel.isHidden = data
+        timeLabel.isHidden = data
+        
+        locationTitle.isHidden = data
+        humidityIcon.isHidden = data
+        humidityTitle.isHidden = data
+        pressureIcon.isHidden = data
+        pressureTitle.isHidden = data
+        cloudIcon.isHidden = data
+        cloudTitle.isHidden = data
+        rainIcon.isHidden = data
+        rainTitle.isHidden = data
+        snowIcon.isHidden = data
+        snowTitle.isHidden = data
     }
     
     func getAPIData() {
@@ -68,13 +108,31 @@ class SearchViewController: UIViewController {
             if (forecast.code != 200) {
                 // no results, invalid city
                 result += "Sorry, invalid city.  Try again"
+                self.hideDisplay(data: true)
             } else {
                 
+                let now = Date()
+
+                let formatter = DateFormatter()
+                formatter.dateStyle = .long
+                formatter.timeStyle = .long
+
+                let datetime = formatter.string(from: now)
+                self.timeLabel.text = datetime
+                
+                var description: String = ""
+                for d in forecast.weather {
+                    description = "\(d.description). High \(String(format: "%g", round(forecast.temperature_max))) °C. Low \(String(format: "%g", round(forecast.temperature_min))) °C."
+                }
+
+                self.descriptionLabel.text = description
                 self.cityName.text = forecast.city + ", " + forecast.country
                 self.temperatureLabel.text = String(format: "%g", round(forecast.temperature)) + " °C"
                 self.humidityLabel.text = String(forecast.humidity) + " %"
                 self.pressureLabel.text = String(forecast.pressure) + " hPa"
                 self.cloudinessLabel.text = String(forecast.cloud_percentage) + " %"
+                self.rainVolumeLabel.text = String(forecast.rain ?? 0) + " mm"
+                self.snowVolumeLabel.text = String(forecast.snow ?? 0) + " mm"
                 
                 var iconPath: String = ""
                 for f in forecast.weather{
@@ -82,7 +140,7 @@ class SearchViewController: UIViewController {
                 }
                 let iconURL = URL(string: iconPath) ?? nil
                 self.weatherIcon.af_setImage(withURL: iconURL!)
-                
+                self.hideDisplay(data: false)
                 result += "longitude: \(forecast.coord_lon)\n"
                 result += "latitude: \(forecast.coord_lat)\n"
                 for f in forecast.weather{
