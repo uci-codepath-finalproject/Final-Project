@@ -16,10 +16,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var errorIcon: UIImageView!
+    @IBOutlet weak var errorMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        errorIcon.isHidden = true
+        errorMessage.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -29,16 +32,28 @@ class SignUpViewController: UIViewController {
         user["lastName"] = lastNameField.text
         user.username = emailField.text
         user.password = passwordField.text
-        user.signUpInBackground(block: { (success, error) in
-            if success {
-                print("added new user!")
-                self.dismiss(animated: true, completion: nil)
-            } else {
-                print("Error: \(error?.localizedDescription)")
-            }
-        })
+        if(passwordField.text == confirmPasswordField.text) {
+            errorIcon.isHidden = true
+            errorMessage.isHidden = true
+            user.signUpInBackground(block: { (success, error) in
+                if success {
+                    print("added new user!")
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print("Error: \(error?.localizedDescription)")
+                }
+            })
+        } else if(passwordField.text != confirmPasswordField.text) {
+            errorIcon.isHidden = false
+            errorMessage.isHidden = false
+        }
         
         //TODO : STILL NEED TO SET FIRST / LAST NAME
+    }
+    
+    
+    @IBAction func closeSignUpPage(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

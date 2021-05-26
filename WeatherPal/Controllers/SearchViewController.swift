@@ -127,6 +127,9 @@ class SearchViewController: UIViewController {
                 result += "Sorry, invalid city. Try again"
                 self.hideDisplay(data: true)
                 self.errorIcon.isHidden = false
+                var errorMessage: String = ""
+                errorMessage = "Sorry, \(self.searchBar.text ?? "the name you enter ") is an invalid city. Try again."
+                self.errorText.text = errorMessage
                 self.errorText.isHidden = false
 
             } else {
@@ -188,6 +191,7 @@ class SearchViewController: UIViewController {
                 result += "snow        (mm): \(forecast.snow ?? 0)\n"
                 print("results: \(result)")
             }
+            self.searchBar.text = ""
         }
     }
     
