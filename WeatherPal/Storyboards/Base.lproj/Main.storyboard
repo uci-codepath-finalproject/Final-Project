@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,7 +518,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="6aY-21-PZH">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="gCE-Y9-Krg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="gCE-Y9-Krg">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="kV6-2C-7wp" id="alM-HG-aTB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="email" destination="TeJ-qP-L9y" id="G1k-Gz-rbU"/>
