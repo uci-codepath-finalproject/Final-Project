@@ -517,7 +517,9 @@
                             <constraint firstItem="TeJ-qP-L9y" firstAttribute="top" secondItem="o4Z-w8-7IY" secondAttribute="bottom" constant="20" id="zR3-o5-l4P"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="6aY-21-PZH"/>
+                    <navigationItem key="navigationItem" title="Profile" id="6aY-21-PZH">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="gCE-Y9-Krg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="email" destination="TeJ-qP-L9y" id="G1k-Gz-rbU"/>
                         <outlet property="name" destination="o4Z-w8-7IY" id="IaF-JF-c92"/>
@@ -546,7 +548,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="OYd-4d-OZz">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="DJ2-aq-Zh3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabController" modalPresentationStyle="fullScreen" id="DJ2-aq-Zh3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MN5-L4-Zq2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -565,7 +567,7 @@
         <!--Profile-->
         <scene sceneID="CbK-3G-2UR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXs-F2-uQ9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="UXs-F2-uQ9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="profile_icon" id="lTk-dQ-HUT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W1n-Nh-UX4">
