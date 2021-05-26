@@ -25,7 +25,7 @@ class Forecast {
     var visibility: Int
     var wind_speed: Double
     var wind_direction_deg: Int
-    var wind_gust: Double
+    var wind_gust: Double?
     var cloud_percentage: Int
     var rain: Double?
     var snow: Double?
@@ -101,7 +101,7 @@ class Forecast {
             winds = (dict["wind"]) as! [String:Any]
             wind_speed = winds["speed"] as! Double
             wind_direction_deg = winds["deg"] as! Int
-            wind_gust = winds["gust"] as! Double
+            wind_gust = winds["gust"] as? Double
             
             cloud_percentage = ((dict["clouds"]) as! [String:Any])["all"] as! Int
             

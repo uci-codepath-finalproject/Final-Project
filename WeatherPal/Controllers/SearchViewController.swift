@@ -11,7 +11,6 @@ import AlamofireImage
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UITextField!
-    @IBOutlet weak var tempResults: UILabel!
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -22,6 +21,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var snowVolumeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var windSpeedLabel: UILabel!
+    @IBOutlet weak var windDegreeLabel: UILabel!
+    @IBOutlet weak var windGustLabel: UILabel!
     
     @IBOutlet weak var locationTitle: UILabel!
     @IBOutlet weak var humidityIcon: UIImageView!
@@ -34,12 +36,22 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var rainTitle: UILabel!
     @IBOutlet weak var snowIcon: UIImageView!
     @IBOutlet weak var snowTitle: UILabel!
+    @IBOutlet weak var windIcon: UIImageView!
+    @IBOutlet weak var windTitle: UILabel!
+    @IBOutlet weak var errorIcon: UIImageView!
+    @IBOutlet weak var errorText: UILabel!
+    
+    
+    
     
     var forecast: Forecast? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideDisplay(data: true)
+        errorIcon.isHidden = true
+        errorText.isHidden = true
+
         // Do any additional setup after loading the view.
     }
     
@@ -54,6 +66,9 @@ class SearchViewController: UIViewController {
         snowVolumeLabel.isHidden = data
         descriptionLabel.isHidden = data
         timeLabel.isHidden = data
+        windSpeedLabel.isHidden = data
+        windDegreeLabel.isHidden = data
+        windGustLabel.isHidden = data
         
         locationTitle.isHidden = data
         humidityIcon.isHidden = data
@@ -66,6 +81,8 @@ class SearchViewController: UIViewController {
         rainTitle.isHidden = data
         snowIcon.isHidden = data
         snowTitle.isHidden = data
+        windIcon.isHidden = data
+        windTitle.isHidden = data
     }
     
     func getAPIData() {
@@ -89,7 +106,7 @@ class SearchViewController: UIViewController {
             print(forecast.visibility)
             print(forecast.wind_speed)
             print(forecast.wind_direction_deg)
-            print(forecast.wind_gust)
+            print(forecast.wind_gust ?? "N/A")
             print(forecast.cloud_percentage)
             print(forecast.rain ?? "N/A")
             print(forecast.snow ?? "N/A")
@@ -107,16 +124,17 @@ class SearchViewController: UIViewController {
             self.forecast = forecast
             if (forecast.code != 200) {
                 // no results, invalid city
-                result += "Sorry, invalid city.  Try again"
+                result += "Sorry, invalid city. Try again"
                 self.hideDisplay(data: true)
+                self.errorIcon.isHidden = false
+                self.errorText.isHidden = false
+
             } else {
                 
                 let now = Date()
-
                 let formatter = DateFormatter()
                 formatter.dateStyle = .long
                 formatter.timeStyle = .long
-
                 let datetime = formatter.string(from: now)
                 self.timeLabel.text = datetime
                 
@@ -133,6 +151,9 @@ class SearchViewController: UIViewController {
                 self.cloudinessLabel.text = String(forecast.cloud_percentage) + " %"
                 self.rainVolumeLabel.text = String(forecast.rain ?? 0) + " mm"
                 self.snowVolumeLabel.text = String(forecast.snow ?? 0) + " mm"
+                self.windSpeedLabel.text = "Speed: " + String(forecast.wind_speed) + " m/s"
+                self.windDegreeLabel.text = "Direction: " + String(forecast.wind_direction_deg) + " °"
+                self.windGustLabel.text = "Gust: " + String(forecast.wind_gust ?? 0) + " m/s"
                 
                 var iconPath: String = ""
                 for f in forecast.weather{
@@ -140,7 +161,12 @@ class SearchViewController: UIViewController {
                 }
                 let iconURL = URL(string: iconPath) ?? nil
                 self.weatherIcon.af_setImage(withURL: iconURL!)
+                
                 self.hideDisplay(data: false)
+                self.errorIcon.isHidden = true
+                self.errorText.isHidden = true
+
+                
                 result += "longitude: \(forecast.coord_lon)\n"
                 result += "latitude: \(forecast.coord_lat)\n"
                 for f in forecast.weather{
@@ -162,12 +188,7 @@ class SearchViewController: UIViewController {
                 result += "snow        (mm): \(forecast.snow ?? 0)\n"
                 print("results: \(result)")
             }
-            self.tempResults.text = result
         }
-    }
-    
-    @IBAction func testAPI(_ sender: Any) {
-        getAPIData()
     }
     
     /*
