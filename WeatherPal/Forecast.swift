@@ -29,6 +29,7 @@ class Forecast {
     var cloud_percentage: Int
     var rain: Double?
     var snow: Double?
+    var code: Int
     
     // deal with rain vs snow
     
@@ -43,39 +44,70 @@ class Forecast {
 //    var reviews: Int
     
     init(dict: [String:Any]) {
-        //TODO : ACCOUNT IF THERE ARE NO RESULTS
-        coords = (dict["coord"]) as! [String:Any]
-        coord_lon = coords["lon"] as! Double
-        coord_lat = coords["lat"] as! Double
-        
-        temps = (dict["weather"]) as! [Any]
-        for temp in temps {
-            self.weather.append(WeatherDescription.init(dict: temp as! [String : Any]))
+        if (dict["message"] != nil) { // invalid city
+            code = 404
             
-        }
-        
-        mains = (dict["main"]) as! [String:Any]
-        temperature = (mains["temp"] as! Double) - 273
-        temperature_feelslike = (mains["feels_like"] as! Double) - 273
-        temperature_min = (mains["temp_min"] as! Double) - 273
-        temperature_max = (mains["temp_max"] as! Double) - 273
-        pressure = mains["pressure"] as! Int
-        humidity = mains["humidity"] as! Int
-        
-        visibility = (dict["visibility"]) as! Int
-        
-        winds = (dict["wind"]) as! [String:Any]
-        wind_speed = winds["speed"] as! Double
-        wind_direction_deg = winds["deg"] as! Int
-        wind_gust = winds["gust"] as! Double
-        
-        cloud_percentage = ((dict["clouds"]) as! [String:Any])["all"] as! Int
-        
-        if (dict["rain"] != nil) {
-            rain = ((dict["rain"]) as! [String:Any])["rain.1h"] as? Double
-        }
-        if (dict["snow"] != nil) {
-            snow = ((dict["snow"]) as! [String:Any])["snow.1h"] as? Double
+            coords = [:]
+            coord_lon = 0
+            coord_lat = 0
+            temps = []
+            weather = []
+            temperature = 0
+            temperature_feelslike = 0
+            temperature_min = 0
+            temperature_max = 0
+            pressure = 0
+            humidity = 0
+            visibility = 0
+            wind_speed = 0
+            wind_direction_deg = 0
+            wind_gust = 0
+            cloud_percentage = 0
+            rain = 0
+            snow = 0
+            
+            // deal with rain vs snow
+            
+            coords = [:]
+            mains = [:]
+            winds = [:]
+            
+        } else { // only initialize values if we know it was a valid city
+            code = 200
+            
+            coords = (dict["coord"]) as! [String:Any]
+            coord_lon = coords["lon"] as! Double
+            coord_lat = coords["lat"] as! Double
+            
+            temps = (dict["weather"]) as! [Any]
+            for temp in temps {
+                self.weather.append(WeatherDescription.init(dict: temp as! [String : Any]))
+                
+            }
+            
+            mains = (dict["main"]) as! [String:Any]
+            temperature = (mains["temp"] as! Double) - 273
+            temperature_feelslike = (mains["feels_like"] as! Double) - 273
+            temperature_min = (mains["temp_min"] as! Double) - 273
+            temperature_max = (mains["temp_max"] as! Double) - 273
+            pressure = mains["pressure"] as! Int
+            humidity = mains["humidity"] as! Int
+            
+            visibility = (dict["visibility"]) as! Int
+            
+            winds = (dict["wind"]) as! [String:Any]
+            wind_speed = winds["speed"] as! Double
+            wind_direction_deg = winds["deg"] as! Int
+            wind_gust = winds["gust"] as! Double
+            
+            cloud_percentage = ((dict["clouds"]) as! [String:Any])["all"] as! Int
+            
+            if (dict["rain"] != nil) {
+                rain = ((dict["rain"]) as! [String:Any])["rain.1h"] as? Double
+            }
+            if (dict["snow"] != nil) {
+                snow = ((dict["snow"]) as! [String:Any])["snow.1h"] as? Double
+            }
         }
     }
     

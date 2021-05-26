@@ -60,7 +60,7 @@
 		0DABDB5C264B6DA9006E9F7E /* WeatherPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DABDB60264B6DA9006E9F7E /* WeatherPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPalUITests.swift; sourceTree = "<group>"; };
 		0DABDB62264B6DA9006E9F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/hao-mingchiang/Desktop/Final-Project/WeatherPal/Controllers/LoginViewController.swift"; sourceTree = "<absolute>"; };
+		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/ethanwong/Document/UCI/CodePathiOS/Final-Project/WeatherPal/Controllers/LoginViewController.swift"; sourceTree = "<absolute>"; };
 		0DC0D702264BA7C300543C52 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0DC0D707264BA7E200543C52 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };

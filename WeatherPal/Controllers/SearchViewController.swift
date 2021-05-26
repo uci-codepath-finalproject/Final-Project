@@ -56,25 +56,30 @@ class SearchViewController: UIViewController {
                 return
             }
             self.forecast = forecast
-            result += "longitude: \(forecast.coord_lon)\n"
-            result += "latitude: \(forecast.coord_lat)\n"
-            for f in forecast.weather{
-                result += "overview: \(f.description)\n"
+            if (forecast.code != 200) {
+                // no results, invalid city
+                result += "Sorry, invalid city.  Try again"
+            } else {
+                result += "longitude: \(forecast.coord_lon)\n"
+                result += "latitude: \(forecast.coord_lat)\n"
+                for f in forecast.weather{
+                    result += "overview: \(f.description)\n"
+                }
+                result += "temperature  (C): \(forecast.temperature)\n"
+                result += "feels like   (C): \(forecast.temperature_feelslike)\n"
+                result += "min temp     (C): \(forecast.temperature_min)\n"
+                result += "max temp     (C): \(forecast.temperature_max)\n"
+                result += "pressure   (hPa): \(forecast.pressure)\n"
+                result += "humidity     (%): \(forecast.humidity)\n"
+                result += "visibility   (m): \(forecast.visibility)\n"
+                result += "wind speed (m/s): \(forecast.wind_speed)\n"
+                result += "direction  (deg): \(forecast.wind_direction_deg)\n"
+                result += "wind gust  (m/s): \(forecast.wind_gust)\n"
+                result += "cloud %      (%): \(forecast.cloud_percentage)\n"
+                result += "rain        (mm): \(forecast.rain ?? 0)\n"
+                result += "snow        (mm): \(forecast.snow ?? 0)\n"
+                print("results: \(result)")
             }
-            result += "temperature  (C): \(forecast.temperature)\n"
-            result += "feels like   (C): \(forecast.temperature_feelslike)\n"
-            result += "min temp     (C): \(forecast.temperature_min)\n"
-            result += "max temp     (C): \(forecast.temperature_max)\n"
-            result += "pressure   (hPa): \(forecast.pressure)\n"
-            result += "humidity     (%): \(forecast.humidity)\n"
-            result += "visibility   (m): \(forecast.visibility)\n"
-            result += "wind speed (m/s): \(forecast.wind_speed)\n"
-            result += "direction  (deg): \(forecast.wind_direction_deg)\n"
-            result += "wind gust  (m/s): \(forecast.wind_gust)\n"
-            result += "cloud %      (%): \(forecast.cloud_percentage)\n"
-            result += "rain        (mm): \(forecast.rain ?? 0)\n"
-            result += "snow        (mm): \(forecast.snow ?? 0)\n"
-            print("results: \(result)")
             self.tempResults.text = result
         }
     }
