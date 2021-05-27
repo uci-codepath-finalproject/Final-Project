@@ -375,18 +375,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="error_icon" translatesAutoresizingMaskIntoConstraints="NO" id="CE3-V2-TPq">
-                                <rect key="frame" x="15" y="635" width="64" height="64"/>
+                                <rect key="frame" x="1" y="635" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwords do not match." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iER-aF-wiU">
-                                <rect key="frame" x="92" y="636" width="302" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please fill out all the information." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBW-qt-isq" userLabel="Error Message2">
-                                <rect key="frame" x="71" y="638" width="344" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwords do not match." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iER-aF-wiU">
+                                <rect key="frame" x="39" y="636" width="382" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -425,7 +418,6 @@
                         <outlet property="emailField" destination="fhK-8R-aZV" id="dbR-ze-qXq"/>
                         <outlet property="errorIcon" destination="CE3-V2-TPq" id="Jxj-cG-nSI"/>
                         <outlet property="errorMessage" destination="iER-aF-wiU" id="QFl-fz-6Ri"/>
-                        <outlet property="errorMessage2" destination="LBW-qt-isq" id="s27-tt-eSr"/>
                         <outlet property="firstNameField" destination="y72-yd-tpo" id="M6O-mR-Ngy"/>
                         <outlet property="lastNameField" destination="KT9-rL-hSv" id="puW-ct-rzU"/>
                         <outlet property="passwordField" destination="Bbr-kV-Sax" id="WsE-gc-QrM"/>
@@ -629,13 +621,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please type a city in the text field." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqi-ly-2wb" userLabel="Error Text2">
-                                <rect key="frame" x="20" y="230" width="382" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YMw-vr-r3J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -649,7 +634,6 @@
                         <outlet property="descriptionLabel" destination="HGr-nH-1Ga" id="Hkb-h6-VfX"/>
                         <outlet property="errorIcon" destination="7Sc-Rw-dzn" id="fQa-hu-aNI"/>
                         <outlet property="errorText" destination="kv0-Q5-1Sw" id="98e-Hb-l3a"/>
-                        <outlet property="errorText2" destination="fqi-ly-2wb" id="x0f-5p-HUk"/>
                         <outlet property="humidityIcon" destination="QLm-iP-agN" id="r3c-KO-UoO"/>
                         <outlet property="humidityLabel" destination="1Pc-G8-Kd3" id="qga-Ee-GZH"/>
                         <outlet property="humidityTitle" destination="1Qo-WY-G93" id="SdD-m6-qB1"/>

@@ -25,7 +25,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var windDegreeLabel: UILabel!
     @IBOutlet weak var windGustLabel: UILabel!
     
-    
     @IBOutlet weak var locationTitle: UILabel!
     @IBOutlet weak var humidityIcon: UIImageView!
     @IBOutlet weak var humidityTitle: UILabel!
@@ -41,7 +40,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var windTitle: UILabel!
     @IBOutlet weak var errorIcon: UIImageView!
     @IBOutlet weak var errorText: UILabel!
-    @IBOutlet weak var errorText2: UILabel!
     
     var forecast: Forecast? = nil
     
@@ -50,7 +48,6 @@ class SearchViewController: UIViewController {
         hideDisplay(data: true)
         errorIcon.isHidden = true
         errorText.isHidden = true
-        errorText2.isHidden = true
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
@@ -120,11 +117,14 @@ class SearchViewController: UIViewController {
     
     @IBAction func performSearch(_ sender: Any) {
         searchBar.resignFirstResponder()
+        var errorMessage: String = ""
         let text = (searchBar.text ?? "")
         //var result = String()
         if(text == "") {
+            errorMessage = "Please type a city in a text field."
+            self.errorText.text = errorMessage
             errorIcon.isHidden = false
-            errorText2.isHidden = false
+            errorText.isHidden = false
         } else if(text != "") {
             API.getForecast(city: text) { (forecast) in
                 guard let forecast = forecast else {
@@ -137,8 +137,6 @@ class SearchViewController: UIViewController {
                     //result += "Sorry, invalid city. Try again"
                     self.hideDisplay(data: true)
                     self.errorIcon.isHidden = false
-                    self.errorText2.isHidden = true
-                    var errorMessage: String = ""
                     errorMessage = "Sorry, '\(self.searchBar.text ?? "the name you enter ")' is an invalid city. Please try again."
                     self.errorText.text = errorMessage
                     self.errorText.isHidden = false
@@ -179,7 +177,6 @@ class SearchViewController: UIViewController {
                     self.hideDisplay(data: false)
                     self.errorIcon.isHidden = true
                     self.errorText.isHidden = true
-                    self.errorText2.isHidden = true
                     
     //                result += "longitude: \(forecast.coord_lon)\n"
     //                result += "latitude: \(forecast.coord_lat)\n"

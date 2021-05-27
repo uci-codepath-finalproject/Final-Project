@@ -18,14 +18,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var errorIcon: UIImageView!
     @IBOutlet weak var errorMessage: UILabel!
-    @IBOutlet weak var errorMessage2: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         errorIcon.isHidden = true
         errorMessage.isHidden = true
-        errorMessage2.isHidden = true
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
@@ -37,6 +35,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func onCreateNewAccount(_ sender: Any) {
         let user = PFUser()
+        var errorText: String = ""
         user["firstName"] = firstNameField.text
         user["lastName"] = lastNameField.text
         user.username = emailField.text
@@ -53,14 +52,16 @@ class SignUpViewController: UIViewController {
                 }
             })
         } else if(firstNameField.text == "" || lastNameField.text == "" || emailField.text == "") {
-            errorIcon.isHidden = false
-            errorMessage.isHidden = true
-            errorMessage2.isHidden = false
-        }
-        else if(passwordField.text != confirmPasswordField.text) {
+            errorText = "Please fill out all the information."
+            errorMessage.text = errorText
             errorIcon.isHidden = false
             errorMessage.isHidden = false
-            errorMessage2.isHidden = true
+        }
+        else if(passwordField.text != confirmPasswordField.text) {
+            errorText = "Passwords do not match."
+            errorMessage.text = errorText
+            errorIcon.isHidden = false
+            errorMessage.isHidden = false
         }
         
         //TODO : STILL NEED TO SET FIRST / LAST NAME
