@@ -91,6 +91,17 @@
                                     <constraint firstAttribute="width" secondItem="5ne-Af-LRx" secondAttribute="height" multiplier="313:39" id="wsJ-fJ-0SH"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="error_icon" translatesAutoresizingMaskIntoConstraints="NO" id="HoN-4h-EiR">
+                                <rect key="frame" x="182" y="605" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fail to login. Please double-check your email and password." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gra-D0-lBe">
+                                <rect key="frame" x="20" y="677" width="388" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,6 +133,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorIcon" destination="HoN-4h-EiR" id="uEw-H8-OWa"/>
+                        <outlet property="errorMessage" destination="gra-D0-lBe" id="Q8d-qv-cWP"/>
                         <outlet property="passwordField" destination="vAB-kG-NRD" id="toL-zP-kQB"/>
                         <outlet property="usernameField" destination="rZ1-Ik-RTN" id="TV2-Wg-d4h"/>
                         <segue destination="DJ2-aq-Zh3" kind="presentation" identifier="loginSegue" id="6D0-3P-tSY"/>
@@ -129,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="76.339285714285708"/>
+            <point key="canvasLocation" x="135.98130841121494" y="75.809935205183592"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="YrU-eY-g6P">
@@ -362,11 +375,18 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="error_icon" translatesAutoresizingMaskIntoConstraints="NO" id="CE3-V2-TPq">
-                                <rect key="frame" x="20" y="635" width="64" height="64"/>
+                                <rect key="frame" x="15" y="635" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwords do not match." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iER-aF-wiU">
                                 <rect key="frame" x="92" y="636" width="302" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please fill out all the information." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBW-qt-isq" userLabel="Error Message2">
+                                <rect key="frame" x="71" y="638" width="344" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -405,6 +425,7 @@
                         <outlet property="emailField" destination="fhK-8R-aZV" id="dbR-ze-qXq"/>
                         <outlet property="errorIcon" destination="CE3-V2-TPq" id="Jxj-cG-nSI"/>
                         <outlet property="errorMessage" destination="iER-aF-wiU" id="QFl-fz-6Ri"/>
+                        <outlet property="errorMessage2" destination="LBW-qt-isq" id="s27-tt-eSr"/>
                         <outlet property="firstNameField" destination="y72-yd-tpo" id="M6O-mR-Ngy"/>
                         <outlet property="lastNameField" destination="KT9-rL-hSv" id="puW-ct-rzU"/>
                         <outlet property="passwordField" destination="Bbr-kV-Sax" id="WsE-gc-QrM"/>

@@ -12,12 +12,16 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var errorIcon: UIImageView!
+    @IBOutlet weak var errorMessage: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tap)
+        errorIcon.isHidden = true
+        errorMessage.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -26,14 +30,19 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLogIn(_ sender: Any) {
-        
         let username = usernameField.text!
         let password = passwordField.text!
         
         PFUser.logInWithUsername(inBackground: username, password: password, block: { (user, error) in
             if user != nil {
+                self.errorIcon.isHidden = true
+                self.errorMessage.isHidden = true
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
+                self.usernameField.resignFirstResponder()
+                self.passwordField.resignFirstResponder()
+                self.errorIcon.isHidden = false
+                self.errorMessage.isHidden = false
                 print("Error: \(error?.localizedDescription)")
             }
         })

@@ -18,11 +18,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var errorIcon: UIImageView!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var errorMessage2: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         errorIcon.isHidden = true
         errorMessage.isHidden = true
+        errorMessage2.isHidden = true
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
@@ -38,7 +41,7 @@ class SignUpViewController: UIViewController {
         user["lastName"] = lastNameField.text
         user.username = emailField.text
         user.password = passwordField.text
-        if(passwordField.text == confirmPasswordField.text) {
+        if(passwordField.text == confirmPasswordField.text && firstNameField.text != "" && lastNameField.text != "" && emailField.text != "") {
             errorIcon.isHidden = true
             errorMessage.isHidden = true
             user.signUpInBackground(block: { (success, error) in
@@ -49,9 +52,15 @@ class SignUpViewController: UIViewController {
                     print("Error: \(error?.localizedDescription)")
                 }
             })
-        } else if(passwordField.text != confirmPasswordField.text) {
+        } else if(firstNameField.text == "" || lastNameField.text == "" || emailField.text == "") {
+            errorIcon.isHidden = false
+            errorMessage.isHidden = true
+            errorMessage2.isHidden = false
+        }
+        else if(passwordField.text != confirmPasswordField.text) {
             errorIcon.isHidden = false
             errorMessage.isHidden = false
+            errorMessage2.isHidden = true
         }
         
         //TODO : STILL NEED TO SET FIRST / LAST NAME
@@ -59,7 +68,11 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func closeSignUpPage(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else { return }
+        delegate.window?.rootViewController = loginViewController
     }
     
     /*
