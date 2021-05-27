@@ -51,8 +51,13 @@ class SearchViewController: UIViewController {
         hideDisplay(data: true)
         errorIcon.isHidden = true
         errorText.isHidden = true
-
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     
     func hideDisplay(data: Bool) {
@@ -129,7 +134,7 @@ class SearchViewController: UIViewController {
                 self.hideDisplay(data: true)
                 self.errorIcon.isHidden = false
                 var errorMessage: String = ""
-                errorMessage = "Sorry, \(self.searchBar.text ?? "the name you enter ") is an invalid city. Try again."
+                errorMessage = "Sorry, '\(self.searchBar.text ?? "the name you enter ")' is an invalid city. Try again."
                 self.errorText.text = errorMessage
                 self.errorText.isHidden = false
 

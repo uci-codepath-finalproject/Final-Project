@@ -23,7 +23,13 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         errorIcon.isHidden = true
         errorMessage.isHidden = true
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     
     @IBAction func onCreateNewAccount(_ sender: Any) {
