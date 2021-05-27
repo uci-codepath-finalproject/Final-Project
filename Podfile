@@ -4,7 +4,10 @@
 target 'WeatherPal' do
   # Add Parse pods and install
   pod 'Parse'
+  pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'lottie-ios'
+  pod 'SkeletonView'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 

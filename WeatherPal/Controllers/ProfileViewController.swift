@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import Lottie
 
 class ProfileViewController: UIViewController {
 
@@ -16,8 +17,23 @@ class ProfileViewController: UIViewController {
     let user = PFUser.current()!
     var nameField: String = ""
     
+    var animationView: AnimationView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        animationView = .init(name: "loading")
+        animationView!.frame = view.bounds
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .loop
+        animationView!.animationSpeed = 3
+        view.addSubview(animationView!)
+        animationView!.play()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.animationView!.stop()
+            self.view.subviews.last?.removeFromSuperview()
+        }
+        
         let first_name = user["firstName"] ?? ""
         let last_name = user["lastName"] ?? ""
         name.text = "\(first_name) \(last_name)"

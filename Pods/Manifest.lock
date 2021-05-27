@@ -3,28 +3,37 @@ PODS:
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
   - Bolts/Tasks (1.9.1)
+  - lottie-ios (3.2.3)
   - Parse (1.19.2):
     - Parse/Core (= 1.19.2)
   - Parse/Core (1.19.2):
     - Bolts/Tasks (= 1.9.1)
+  - SkeletonView (1.15.0)
 
 DEPENDENCIES:
+  - Alamofire
   - AlamofireImage
+  - lottie-ios
   - Parse
+  - SkeletonView
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
     - Bolts
+    - lottie-ios
     - Parse
+    - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   Parse: 081fb8755c3000fd11df817eec235def233d0af3
+  SkeletonView: cac18a3ac4f893b09d99e65072d806ef08377aae
 
-PODFILE CHECKSUM: 041c1346963daeab75a801a69f74aca52010b62f
+PODFILE CHECKSUM: 29597806d783c605049f24877fdbb7fbfc3422af
 
 COCOAPODS: 1.10.1

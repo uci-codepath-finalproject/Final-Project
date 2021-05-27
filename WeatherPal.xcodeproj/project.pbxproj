@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0131D6265F6129006DB242 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D0131D5265F6129006DB242 /* loading.json */; };
 		0DABDB3F264B6DA8006E9F7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDB3E264B6DA8006E9F7E /* AppDelegate.swift */; };
 		0DABDB41264B6DA8006E9F7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDB40264B6DA8006E9F7E /* SceneDelegate.swift */; };
 		0DABDB46264B6DA8006E9F7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DABDB44264B6DA8006E9F7E /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		040C7393E035561EB55164C8 /* Pods_WeatherPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6DFD56B486A503FD7E504A /* Pods_WeatherPalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherPalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D0131D5265F6129006DB242 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		0DABDB3B264B6DA8006E9F7E /* WeatherPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DABDB3E264B6DA8006E9F7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DABDB40264B6DA8006E9F7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				0D3A33A326542C4700934399 /* Storyboards */,
 				0D3A339B26542AEC00934399 /* Controllers */,
 				0DABDB3E264B6DA8006E9F7E /* AppDelegate.swift */,
+				0D0131D5265F6129006DB242 /* loading.json */,
 				6B29798C2654A875002D85DD /* API.swift */,
 				6B29798E2654A8BA002D85DD /* Forecast.swift */,
 				0DABDB40264B6DA8006E9F7E /* SceneDelegate.swift */,
@@ -315,6 +318,7 @@
 			files = (
 				0DABDB4B264B6DA9006E9F7E /* LaunchScreen.storyboard in Resources */,
 				0DABDB48264B6DA9006E9F7E /* Assets.xcassets in Resources */,
+				0D0131D6265F6129006DB242 /* loading.json in Resources */,
 				0DABDB46264B6DA8006E9F7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -629,6 +629,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please type a city in the text field." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqi-ly-2wb" userLabel="Error Text2">
+                                <rect key="frame" x="20" y="230" width="382" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YMw-vr-r3J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -642,6 +649,7 @@
                         <outlet property="descriptionLabel" destination="HGr-nH-1Ga" id="Hkb-h6-VfX"/>
                         <outlet property="errorIcon" destination="7Sc-Rw-dzn" id="fQa-hu-aNI"/>
                         <outlet property="errorText" destination="kv0-Q5-1Sw" id="98e-Hb-l3a"/>
+                        <outlet property="errorText2" destination="fqi-ly-2wb" id="x0f-5p-HUk"/>
                         <outlet property="humidityIcon" destination="QLm-iP-agN" id="r3c-KO-UoO"/>
                         <outlet property="humidityLabel" destination="1Pc-G8-Kd3" id="qga-Ee-GZH"/>
                         <outlet property="humidityTitle" destination="1Qo-WY-G93" id="SdD-m6-qB1"/>
