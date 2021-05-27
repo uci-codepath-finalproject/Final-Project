@@ -114,6 +114,7 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func performSearch(_ sender: Any) {
+        searchBar.resignFirstResponder()
         let text = (searchBar.text ?? "")
         var result = String()
         API.getForecast(city: text) { (forecast) in
