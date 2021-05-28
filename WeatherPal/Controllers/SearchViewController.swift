@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class SearchViewController: UIViewController {
     
@@ -41,7 +42,10 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var errorIcon: UIImageView!
     @IBOutlet weak var errorText: UILabel!
     
+    @IBOutlet weak var saveLocationButton: UIButton!
+    
     var forecast: Forecast? = nil
+    var cityToken: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +89,8 @@ class SearchViewController: UIViewController {
         snowTitle.isHidden = data
         windIcon.isHidden = data
         windTitle.isHidden = data
+        
+        saveLocationButton.isHidden = data
     }
     
 //    func getAPIData() {
@@ -156,6 +162,7 @@ class SearchViewController: UIViewController {
                     }
 
                     self.descriptionLabel.text = description
+                    self.cityToken = forecast.city
                     self.cityName.text = forecast.city + ", " + forecast.country
                     self.temperatureLabel.text = String(format: "%g", round(forecast.temperature)) + " °C"
                     self.humidityLabel.text = String(forecast.humidity) + " %"
@@ -202,6 +209,22 @@ class SearchViewController: UIViewController {
                 self.searchBar.text = ""
             }
         }
+    }
+    
+    @IBAction func saveLocation(_ sender: Any) {
+        let city = PFObject(className: "Locations")
+        
+        city["Owner"] = PFUser.current()!
+        city["City"] = cityToken
+        
+        city.saveInBackground(block: {
+            (success, error) in
+            if success {
+                print("saved!")
+            } else {
+                print("error!")
+            }
+        })
     }
     
     /*

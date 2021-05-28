@@ -17,7 +17,7 @@
 		0DABDB61264B6DA9006E9F7E /* WeatherPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABDB60264B6DA9006E9F7E /* WeatherPalUITests.swift */; };
 		0DC0D6F9264BA1D400543C52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */; };
 		0DC0D703264BA7C300543C52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D702264BA7C300543C52 /* SearchViewController.swift */; };
-		0DC0D708264BA7E200543C52 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D707264BA7E200543C52 /* SettingViewController.swift */; };
+		0DC0D708264BA7E200543C52 /* MyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0D707264BA7E200543C52 /* MyLocationViewController.swift */; };
 		0DCE8A30264E59AF0039FDCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */; };
 		0DDC293B265C6C0400C00DCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC293A265C6C0400C00DCF /* ProfileViewController.swift */; };
 		6B29798D2654A875002D85DD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29798C2654A875002D85DD /* API.swift */; };
@@ -62,9 +62,9 @@
 		0DABDB5C264B6DA9006E9F7E /* WeatherPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DABDB60264B6DA9006E9F7E /* WeatherPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPalUITests.swift; sourceTree = "<group>"; };
 		0DABDB62264B6DA9006E9F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/hao-mingchiang/Desktop/Final-Project/WeatherPal/Controllers/LoginViewController.swift"; sourceTree = "<absolute>"; };
+		0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/ethanwong/Document/UCI/CodePathiOS/Final-Project/WeatherPal/Controllers/LoginViewController.swift"; sourceTree = "<absolute>"; };
 		0DC0D702264BA7C300543C52 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		0DC0D707264BA7E200543C52 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		0DC0D707264BA7E200543C52 /* MyLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationViewController.swift; sourceTree = "<group>"; };
 		0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0DDC293A265C6C0400C00DCF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		51D6128425A28E217B5D389E /* Pods-WeatherPalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherPalTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherPalTests/Pods-WeatherPalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 			children = (
 				0DC0D6F8264BA1D400543C52 /* LoginViewController.swift */,
 				0DC0D702264BA7C300543C52 /* SearchViewController.swift */,
-				0DC0D707264BA7E200543C52 /* SettingViewController.swift */,
+				0DC0D707264BA7E200543C52 /* MyLocationViewController.swift */,
 				0DCE8A2F264E59AF0039FDCD /* SignUpViewController.swift */,
 				0DDC293A265C6C0400C00DCF /* ProfileViewController.swift */,
 			);
@@ -456,7 +456,7 @@
 				6B29798F2654A8BA002D85DD /* Forecast.swift in Sources */,
 				0DABDB41264B6DA8006E9F7E /* SceneDelegate.swift in Sources */,
 				6B29798D2654A875002D85DD /* API.swift in Sources */,
-				0DC0D708264BA7E200543C52 /* SettingViewController.swift in Sources */,
+				0DC0D708264BA7E200543C52 /* MyLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
