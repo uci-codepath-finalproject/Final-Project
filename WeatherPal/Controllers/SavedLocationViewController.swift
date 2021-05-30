@@ -1,20 +1,16 @@
 //
-//  SearchViewController.swift
+//  SavedLocationViewController.swift
 //  WeatherPal
 //
-//  Created by Hao-Ming Chiang on 5/11/21.
+//  Created by Ethan Wong on 5/30/21.
 //
 
 import UIKit
 import AlamofireImage
 import Parse
 
-class SearchViewController: UIViewController {
-    
-    @IBOutlet weak var searchBar: UITextField!
-    @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var saveLocationButton: UIButton!
-    
+class SavedLocationViewController: UIViewController {
+
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -47,6 +43,7 @@ class SearchViewController: UIViewController {
     
     var forecast: Forecast? = nil
     var cityToken: String = ""
+    var searchFromSaved: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +53,10 @@ class SearchViewController: UIViewController {
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+        
+        if (searchFromSaved != "") {
+            performSavedSearch()
+        }
     }
     
     @objc func dismissKeyboard() {
@@ -90,8 +91,6 @@ class SearchViewController: UIViewController {
         snowTitle.isHidden = data
         windIcon.isHidden = data
         windTitle.isHidden = data
-        
-        saveLocationButton.isHidden = data
     }
     
 //    func getAPIData() {
@@ -122,11 +121,11 @@ class SearchViewController: UIViewController {
 //        }
 //    }
     
-    @IBAction func performSearch(_ sender: Any) {
-        searchBar.resignFirstResponder()
+    func performSavedSearch() {
         var errorMessage: String = ""
-        let text = (searchBar.text ?? "")
-        //var result = String()
+        let text = searchFromSaved
+        searchFromSaved = ""
+        
         if(text == "") {
             errorMessage = "Please type a city in a text field."
             self.errorText.text = errorMessage
@@ -144,7 +143,7 @@ class SearchViewController: UIViewController {
                     //result += "Sorry, invalid city. Try again"
                     self.hideDisplay(data: true)
                     self.errorIcon.isHidden = false
-                    errorMessage = "Sorry, '\(self.searchBar.text ?? "the name you enter ")' is an invalid city. Please try again."
+                    errorMessage = "Sorry, '\(text)' is an invalid city. Please try again."
                     self.errorText.text = errorMessage
                     self.errorText.isHidden = false
 
@@ -185,47 +184,9 @@ class SearchViewController: UIViewController {
                     self.hideDisplay(data: false)
                     self.errorIcon.isHidden = true
                     self.errorText.isHidden = true
-                    
-    //                result += "longitude: \(forecast.coord_lon)\n"
-    //                result += "latitude: \(forecast.coord_lat)\n"
-    //                for f in forecast.weather{
-    //                    result += "overview: \(f.description)\n"
-    //                }
-    //                result += "city: \(forecast.city)\n"
-    //                result += "temperature  (C): \(forecast.temperature)\n"
-    //                result += "feels like   (C): \(forecast.temperature_feelslike)\n"
-    //                result += "min temp     (C): \(forecast.temperature_min)\n"
-    //                result += "max temp     (C): \(forecast.temperature_max)\n"
-    //                result += "pressure   (hPa): \(forecast.pressure)\n"
-    //                result += "humidity     (%): \(forecast.humidity)\n"
-    //                result += "visibility   (m): \(forecast.visibility)\n"
-    //                result += "wind speed (m/s): \(forecast.wind_speed)\n"
-    //                result += "direction  (deg): \(forecast.wind_direction_deg)\n"
-    //                result += "wind gust  (m/s): \(forecast.wind_gust)\n"
-    //                result += "cloud %      (%): \(forecast.cloud_percentage)\n"
-    //                result += "rain        (mm): \(forecast.rain ?? 0)\n"
-    //                result += "snow        (mm): \(forecast.snow ?? 0)\n"
-    //                print("results: \(result)")
                 }
-                self.searchBar.text = ""
             }
         }
-    }
-    
-    @IBAction func saveLocation(_ sender: Any) {
-        let city = PFObject(className: "Locations")
-        
-        city["Owner"] = PFUser.current()!
-        city["City"] = cityToken
-        
-        city.saveInBackground(block: {
-            (success, error) in
-            if success {
-                print("saved!")
-            } else {
-                print("error!")
-            }
-        })
     }
     
     /*
