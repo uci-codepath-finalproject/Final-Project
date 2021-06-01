@@ -37,15 +37,14 @@ We anticipate starting off our app by providing generic tips on clothing, drivin
 - [X] * User can sign up an account and log in 
 - [X] * User can search for a new location
 - [X] * Each location result is displayed
-- [ ] * Location result page displays weather forecasts and tips
-- [ ] * Settings (Locations, Notification, General Display)
+- [X] * Location result page displays weather forecasts and tips
 
 **Optional Nice-to-have Stories**
 
-- [ ] * User can save locations to be remembered the next time they log in
+- [X] * User can save locations to be remembered the next time they log in
 - [ ] * Map to view weather forecasts on based on current location
 - [ ] * Share forecast / tips on social media
-- [ ] * Support animation for different weather results or tips
+- [X] * Support animation for different weather results or tips
 - [ ] * Support chat functionality to communicate with other users
 
 ### 2. Screen Archetypes
@@ -178,6 +177,6 @@ let password = passwordField.text!
 ```
 ## Video Walkthrough
 
-Work Completed So Far (as of May 24 2021)
+Final Demo (5/31/2021)
 
-<img src='https://media.giphy.com/media/1r9LOGfSuu9dp6JeL4/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/zm2btbP1owyoFWxmtN/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
